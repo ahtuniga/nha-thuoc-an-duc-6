@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Từ Điển Y Khoa | Nhà Thuốc An Đức 6</title>
+    <meta name="description" content="Tra cứu thông tin, thành phần và chỉ định y khoa của các sản phẩm tại Nhà Thuốc An Đức 6.">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- MỚI: đặt theme (sáng/tối) ngay trước khi trang vẽ ra, tránh chớp
+         trắng rồi mới chuyển tối. Logic bấm nút nằm ở theme.js. -->
+    <script>
+        (function () {
+            var saved = localStorage.getItem("theme");
+            var theme = saved || (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+            document.documentElement.setAttribute("data-theme", theme);
+        })();
+    </script>
+</head>
+
+<body>
+
+<!-- =========================================================
+     HEADER (Cập nhật link điều hướng)
+     ========================================================= -->
+<header class="site-header" id="siteHeader">
+    <div class="header-inner">
+        <!-- Ấn logo sẽ quay về trang chủ -->
+        <a href="index.html" class="logo" aria-label="Nhà Thuốc An Đức 6">
+            <span class="logo-main">ANĐỨC6</span>
+            <span class="logo-dot"></span>
+        </a>
+
+        <nav class="main-nav" id="mainNav">
+            <a href="index.html" class="nav-link">Trang chủ</a>
+            <a href="bach_khoa.html" class="nav-link">Tra cứu y khoa</a>
+            <a href="index.html#kien-thuc" class="nav-link">Kiến thức</a>
+            <a href="index.html#ve-chung-toi" class="nav-link">Về chúng tôi</a>
+        </nav>
+
+        <!-- MỚI: nút chuyển Dark Mode -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Chuyển giao diện Sáng/Tối" type="button">
+            <span class="theme-icon theme-icon-sun">☀️</span>
+            <span class="theme-icon theme-icon-moon">🌙</span>
+        </button>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Mở menu" aria-expanded="false" type="button">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+
+<!-- =========================================================
+     MAIN: BÁCH KHOA TRA CỨU
+     ========================================================= -->
+<main id="trang-tra-cuu">
+
+<section class="products-section" id="tra-cuu" style="padding-top: 140px; min-height: 80vh;">
+    <div class="container">
+        
+        <!-- PHẦN TIÊU ĐỀ VÀ TÌM KIẾM -->
+        <div class="products-header-row">
+            <div class="products-title">
+                <h2>Từ điển<br>Y khoa trực tuyến</h2>
+            </div>
+            
+            <div class="products-actions">
+                <p>Tra cứu thông tin tham khảo về thành phần, công dụng theo công bố và lưu ý khi sử dụng.</p>
+                <!-- Ô tìm kiếm -->
+                <div class="dark-search-box">
+                    <input type="text" id="productSearchInput" placeholder="Nhập tên sản phẩm, hoạt chất...">
+                    <span>🔍</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- BỘ LỌC DANH MỤC (Thêm mới để quản lý 70+ sản phẩm) -->
+        <!-- SỬA LỖI: trước đây data-filter dùng gạch ngang ("thuc-pham","dung-cu") -->
+        <div class="category-filter-row">
+            <button class="filter-btn active" data-filter="all">Tất cả</button>
+            <button class="filter-btn" data-filter="thuc_pham">Thực phẩm bổ sung</button>
+            <button class="filter-btn" data-filter="my_pham">Mỹ phẩm</button>
+            <button class="filter-btn" data-filter="dung_cu">Dụng cụ y tế</button>
+        </div>
+
+        <!-- LƯỚI HIỂN THỊ SẢN PHẨM -->
+        <div class="product-grid" id="productGrid"></div>
+
+    </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-top">
+
+            <!-- CỘT TRÁI -->
+            <div class="footer-left">
+                <a href="index.html" class="footer-logo">
+                    ANĐỨC6<span class="logo-dot"></span>
+                </a>
+
+                <h2 class="footer-tagline">
+                    Chia sẻ kiến thức sức khỏe dễ hiểu cho cộng đồng.
+                </h2>
+
+                <div class="footer-disclaimer" style="margin-top: 40px;">
+                    Thông tin trên website chỉ mang tính tham khảo, không thay thế tư vấn, chẩn đoán hay điều trị của bác sĩ. Thực phẩm bảo vệ sức khỏe không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh.
+                </div>
+            </div>
+
+            <!-- CỘT PHẢI -->
+            <div class="footer-right">
+                <div class="footer-link-grid">
+
+                    <div class="link-group">
+                        <strong>TRA CỨU</strong>
+                        <a href="bach_khoa.html">Từ điển y khoa</a>
+                        <a href="index.html#kien-thuc">Bài viết kiến thức</a>
+                        <a href="index.html#giai-phau">Sơ đồ cơ thể</a>
+                    </div>
+
+                    <div class="link-group">
+                        <strong>THÔNG TIN</strong>
+                        <a href="gioi_thieu.html">Giới thiệu</a>
+                        <a href="lien_he.html">Liên hệ</a>
+                        <a href="chinh_sach_bao_mat.html">Chính sách bảo mật</a>
+                    </div>
+
+                    <div class="link-group">
+                        <strong>KẾT NỐI</strong>
+                        <a href="https://www.tiktok.com/@da.liu.ds.tuyn?_r=1&_t=ZS-99imCmG3Syq" target="_blank" rel="noopener">TikTok</a>
+                        <a href="https://www.facebook.com/share/18Qjxf9b3w/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+<!-- =========================================================
+     PRODUCT MODAL (Cửa sổ chi tiết Y Khoa)
+     ========================================================= -->
+<div class="modal" id="productModal" aria-hidden="true">
+    <div class="modal-overlay" data-close-modal></div>
+    <div class="modal-box">
+        <button class="modal-close" data-close-modal aria-label="Đóng" type="button">×</button>
+        
+        <span class="eyebrow">PHÂN TÍCH Y KHOA</span>
+        <h2 id="modalProductName">Sản phẩm</h2>
+        
+        <div class="modal-product-layout">
+            <div class="modal-product-image-wrap" id="modalProductImageWrap">
+                <img id="modalProductImage" class="modal-product-image" src="" alt="">
+            </div>
+
+            <div class="modal-product-content">
+                <span id="modalProductCategory" class="modal-product-category"></span>
+                <p id="modalProductDescription"></p>
+
+                <div class="modal-detail">
+                    <strong>Thành phần dược chất</strong>
+                    <p id="modalIngredients"></p>
+                </div>
+                <div class="modal-detail">
+                    <strong>Công dụng / Chỉ định</strong>
+                    <p id="modalBenefits"></p>
+                </div>
+                <div class="modal-detail">
+                    <strong>Cách sử dụng (Tham khảo)</strong>
+                    <p id="modalUsage"></p>
+                </div>
+                <div class="modal-detail">
+                    <strong>Đối tượng</strong>
+                    <p id="modalUsers"></p>
+                </div>
+                <div class="modal-note">
+                    <p id="modalNote"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- =========================================================
+     JAVASCRIPT
+     ========================================================= -->
+<script src="products.js"></script>
+<script src="bach-khoa-script.js"></script>
+<!-- MỚI: xử lý nút chuyển Dark Mode -->
+<script src="theme.js"></script>
+
+</body>
+</html>
