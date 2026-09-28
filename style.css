@@ -3243,3 +3243,20 @@ body.article-viewer-open {
 .blog-sources h3 { font-size: 1rem; margin: 0 0 8px; }
 .blog-sources ol { padding-left: 20px; opacity: 0.85; }
 .blog-disclaimer { font-size: 0.85rem; opacity: 0.7; margin-top: 20px; }
+
+.footer-link-grid .link-group a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.footer-link-grid .link-group a svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    opacity: 0.8;
+}
+
+.value-icon svg {
+    width: 28px;
+    height: 28px;
+}

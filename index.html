@@ -6,12 +6,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nhà Thuốc An Đức 6 | Chăm sóc sức khỏe</title>
-    <meta name="description" content="Nhà Thuốc An Đức 6 - Cung cấp thông tin sản phẩm, kiến thức và tư vấn chăm sóc sức khỏe.">
+    <meta name="description"
+        content="Nhà Thuốc An Đức 6 - Cung cấp thông tin sản phẩm, kiến thức và tư vấn chăm sóc sức khỏe.">
 
     <link rel="stylesheet" href="style.css?v=999">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="icon" type="image/png" href="favicon.png">
 
     <!-- MỚI: đặt theme (sáng/tối) NGAY LẬP TỨC trước khi trang vẽ ra, tránh
@@ -29,617 +32,698 @@
 
 <body>
 
-<!-- =========================================================
+    <!-- =========================================================
      HEADER
      ========================================================= -->
-<header class="site-header" id="siteHeader">
-    <div class="header-inner">
+    <header class="site-header" id="siteHeader">
+        <div class="header-inner">
 
-        <a href="#trang-chu" class="logo" aria-label="Nhà Thuốc An Đức 6">
-            <span class="logo-main">ANĐỨC6</span>
-            <span class="logo-dot"></span>
-        </a>
-
-        <nav class="main-nav" id="mainNav">
-            <a href="index.html" class="nav-link">Trang chủ</a>
-            <a href="bach_khoa.html" class="nav-link">Bách khoa Y khoa</a>
-            <a href="#kien-thuc" class="nav-link">Kiến thức</a>
-            <a href="gioi_thieu.html" class="nav-link">Về chúng tôi</a>
-        </nav>
-
-        <!-- MỚI: nút chuyển Dark Mode (tính năng chưa tồn tại trước đây, được thêm theo yêu cầu) -->
-        <button class="theme-toggle" id="themeToggle" aria-label="Chuyển giao diện Sáng/Tối" type="button">
-            <span class="theme-icon theme-icon-sun">☀️</span>
-            <span class="theme-icon theme-icon-moon">🌙</span>
-        </button>
-
-        <button class="menu-toggle" id="menuToggle" aria-label="Mở menu" aria-expanded="false" type="button">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
-    </div>
-</header>
-
-
-<!-- =========================================================
-     MAIN
-     ========================================================= -->
-<main id="trang-chu">
-
-<!-- =========================================================
-     ẢNH BÌA
-     ========================================================= -->
-<section class="cover-section" id="hero">
-    <a href="#san-pham" class="cover-link" aria-label="Khám phá sản phẩm">
-        <img src="images/Anh_bia.png" alt="Nhà Thuốc An Đức 6" class="cover-image">
-        <div class="cover-shine"></div>
-    </a>
-</section>
-
-<!-- =========================================================
-     GIỚI THIỆU & 4 Ô TƯƠNG TÁC (ĐÃ CHUYỂN LÊN TRÊN)
-     ========================================================= -->
-<section class="intro-section" id="gioi-thieu">
-    <div class="container">
-
-        <div class="section-heading">
-            <span class="eyebrow">NHÀ THUỐC AN ĐỨC 6</span>
-            <h2>
-                Đồng hành cùng bạn<br>
-                trên hành trình chăm sóc sức khỏe.
-            </h2>
-            <p>
-                Cung cấp thông tin sản phẩm, kiến thức và những nội dung hữu ích để bạn chủ động chăm sóc bản thân và gia đình.
-            </p>
-        </div>
-
-        <!-- 4 MỤC TƯƠNG TÁC -->
-        <div class="value-grid">
-            <a href="#san-pham" class="value-item" aria-label="Xem sản phẩm">
-                <div class="value-icon product-icon"><span>□</span></div>
-                <div class="value-text">
-                    <strong>Tra cứu</strong>
-                    <span>Thông tin tham khảo</span>
-                </div>
-                <div class="value-arrow">→</div>
-            </a>
-            <a href="#kien-thuc" class="value-item" aria-label="Xem thông tin">
-                <div class="value-icon info-icon"><span>≡</span></div>
-                <div class="value-text">
-                    <strong>Kiến thức</strong>
-                    <span>Dễ hiểu</span>
-                </div>
-                <div class="value-arrow">→</div>
-            </a>
-            <a href="#tu-van" class="value-item" aria-label="Tư vấn">
-                <div class="value-icon advice-icon"><span>♡</span></div>
-                <div class="value-text">
-                    <strong>Bài viết</strong>
-                    <span>Có nguồn tham khảo</span>
-                </div>
-                <div class="value-arrow">→</div>
-            </a>
-            <a href="#ve-chung-toi" class="value-item" aria-label="Về chúng tôi">
-                <div class="value-icon support-icon"><span>+</span></div>
-                <div class="value-text">
-                    <strong>Đồng hành</strong>
-                    <span>Lâu dài</span>
-                </div>
-                <div class="value-arrow">→</div>
-            </a>
-        </div>
-
-    </div>
-</section>
-
-
-<!-- =========================================================
-     KHUNG HÌNH ĐỘNG (ĐÃ CHUYỂN XUỐNG DƯỚI)
-     ========================================================= -->
-<section class="health-showcase-section" id="tu-van">
-    <div class="health-showcase">
-
-        <!-- ÁNH SÁNG ĐỘNG -->
-        <div class="showcase-glow glow-one"></div>
-        <div class="showcase-glow glow-two"></div>
-        <div class="showcase-glow glow-three"></div>
-
-        <!-- VÒNG TRÒN TRANG TRÍ -->
-        <div class="showcase-ring ring-one"></div>
-        <div class="showcase-ring ring-two"></div>
-        <div class="showcase-ring ring-three"></div>
-
-        <!-- HEADER -->
-        <div class="showcase-header">
-            <a href="#trang-chu" class="showcase-logo">
-                ANĐỨC6
-                <span></span>
+            <a href="#trang-chu" class="logo" aria-label="Nhà Thuốc An Đức 6">
+                <span class="logo-main">ANĐỨC6</span>
+                <span class="logo-dot"></span>
             </a>
 
-            <nav class="showcase-nav">
-                <a href="#san-pham">Tra cứu</a>
-                <a href="#kien-thuc">Kiến thức</a>
-                <a href="#ve-chung-toi">Về chúng tôi</a>
+            <nav class="main-nav" id="mainNav">
+                <a href="index.html" class="nav-link">Trang chủ</a>
+                <a href="bach_khoa.html" class="nav-link">Bách khoa Y khoa</a>
+                <a href="#kien-thuc" class="nav-link">Kiến thức</a>
+                <a href="gioi_thieu.html" class="nav-link">Về chúng tôi</a>
             </nav>
 
-            <a href="#san-pham" class="showcase-button">
-                Khám phá
-                <span>→</span>
-            </a>
+            <!-- MỚI: nút chuyển Dark Mode (tính năng chưa tồn tại trước đây, được thêm theo yêu cầu) -->
+            <button class="theme-toggle" id="themeToggle" aria-label="Chuyển giao diện Sáng/Tối" type="button">
+                <span class="theme-icon theme-icon-sun">☀️</span>
+                <span class="theme-icon theme-icon-moon">🌙</span>
+            </button>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Mở menu" aria-expanded="false" type="button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
         </div>
+    </header>
 
-        <!-- NỘI DUNG -->
-        <div class="showcase-content">
-            <!-- BÊN TRÁI -->
-            <div class="showcase-copy">
-                <div class="showcase-eyebrow">
-                    <span></span>
-                    NHÀ THUỐC AN ĐỨC 6
+
+    <!-- =========================================================
+     MAIN
+     ========================================================= -->
+    <main id="trang-chu">
+
+        <!-- =========================================================
+     ẢNH BÌA
+     ========================================================= -->
+        <section class="cover-section" id="hero">
+            <a href="#san-pham" class="cover-link" aria-label="Khám phá sản phẩm">
+                <img src="images/Anh_bia.png" alt="Nhà Thuốc An Đức 6" class="cover-image">
+                <div class="cover-shine"></div>
+            </a>
+        </section>
+
+        <!-- =========================================================
+     GIỚI THIỆU & 4 Ô TƯƠNG TÁC (ĐÃ CHUYỂN LÊN TRÊN)
+     ========================================================= -->
+        <section class="intro-section" id="gioi-thieu">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">NHÀ THUỐC AN ĐỨC 6</span>
+                    <h2>
+                        Đồng hành cùng bạn<br>
+                        trên hành trình chăm sóc sức khỏe.
+                    </h2>
+                    <p>
+                        Cung cấp thông tin sản phẩm, kiến thức và những nội dung hữu ích để bạn chủ động chăm sóc bản
+                        thân và gia đình.
+                    </p>
                 </div>
-                <h2>
-                    Chăm sóc sức khỏe<br>
-                    <em>chủ động hơn</em>
-                    mỗi ngày.
-                </h2>
-                <p>
-                    Khám phá sản phẩm được chọn lọc, thông tin hữu ích và những kiến thức giúp bạn chăm sóc sức khỏe chủ động cho bản thân và gia đình.
-                </p>
-                <a href="#san-pham" class="showcase-main-button">
-                    Xem sản phẩm
-                    <span>→</span>
-                </a>
+
+                <!-- 4 MỤC TƯƠNG TÁC -->
+                <div class="value-grid">
+                    <a href="#san-pham" class="value-item" aria-label="Tra cứu">
+                        <div class="value-icon product-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="7" />
+                                <path d="M21 21l-4.3-4.3" />
+                            </svg>
+                        </div>
+                        <div class="value-text">
+                            <strong>Tra cứu</strong>
+                            <span>Thông tin tham khảo</span>
+                        </div>
+                        <div class="value-arrow">→</div>
+                    </a>
+
+                    <a href="#kien-thuc" class="value-item" aria-label="Kiến thức">
+                        <div class="value-icon info-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                <path d="M14 2v6h6" />
+                                <path d="M16 13H8" />
+                                <path d="M16 17H8" />
+                                <path d="M10 9H8" />
+                            </svg>
+                        </div>
+                        <div class="value-text">
+                            <strong>Kiến thức</strong>
+                            <span>Dễ hiểu</span>
+                        </div>
+                        <div class="value-arrow">→</div>
+                    </a>
+
+                    <a href="#giai-phau" class="value-item" aria-label="Sơ đồ cơ thể">
+                        <div class="value-icon advice-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                            </svg>
+                        </div>
+                        <div class="value-text">
+                            <strong>Cơ thể</strong>
+                            <span>Sơ đồ minh họa</span>
+                        </div>
+                        <div class="value-arrow">→</div>
+                    </a>
+
+                    <a href="#ve-chung-toi" class="value-item" aria-label="Về chúng tôi">
+                        <div class="value-icon support-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 16v-4" />
+                                <path d="M12 8h.01" />
+                            </svg>
+                        </div>
+                        <div class="value-text">
+                            <strong>Giới thiệu</strong>
+                            <span>Về trang này</span>
+                        </div>
+                        <div class="value-arrow">→</div>
+                    </a>
+                </div>
+
             </div>
+        </section>
 
-            <!-- BÊN PHẢI -->
-            <div class="showcase-visual">
-                <!-- VÒNG QUỸ ĐẠO -->
-                <div class="orbit orbit-one"></div>
-                <div class="orbit orbit-two"></div>
-                <div class="orbit orbit-three"></div>
 
-                <!-- LỌ THUỐC -->
-                <div class="medicine-bottle">
-                    <div class="bottle-cap"></div>
-                    <div class="bottle-neck"></div>
-                    <div class="bottle-body">
-                        <div class="bottle-label">
-                            <strong>ANĐỨC6</strong>
-                            <small>HEALTHCARE</small>
-                            <div class="bottle-symbol">+</div>
-                            <span>CHĂM SÓC</span>
+        <!-- =========================================================
+     KHUNG HÌNH ĐỘNG (ĐÃ CHUYỂN XUỐNG DƯỚI)
+     ========================================================= -->
+        <section class="health-showcase-section" id="tu-van">
+            <div class="health-showcase">
+
+                <!-- ÁNH SÁNG ĐỘNG -->
+                <div class="showcase-glow glow-one"></div>
+                <div class="showcase-glow glow-two"></div>
+                <div class="showcase-glow glow-three"></div>
+
+                <!-- VÒNG TRÒN TRANG TRÍ -->
+                <div class="showcase-ring ring-one"></div>
+                <div class="showcase-ring ring-two"></div>
+                <div class="showcase-ring ring-three"></div>
+
+                <!-- HEADER -->
+                <div class="showcase-header">
+                    <a href="#trang-chu" class="showcase-logo">
+                        ANĐỨC6
+                        <span></span>
+                    </a>
+
+                    <nav class="showcase-nav">
+                        <a href="#san-pham">Tra cứu</a>
+                        <a href="#kien-thuc">Kiến thức</a>
+                        <a href="#ve-chung-toi">Về chúng tôi</a>
+                    </nav>
+
+                    <a href="#san-pham" class="showcase-button">
+                        Khám phá
+                        <span>→</span>
+                    </a>
+                </div>
+
+                <!-- NỘI DUNG -->
+                <div class="showcase-content">
+                    <!-- BÊN TRÁI -->
+                    <div class="showcase-copy">
+                        <div class="showcase-eyebrow">
+                            <span></span>
+                            NHÀ THUỐC AN ĐỨC 6
+                        </div>
+                        <h2>
+                            Chăm sóc sức khỏe<br>
+                            <em>chủ động hơn</em>
+                            mỗi ngày.
+                        </h2>
+                        <p>
+                            Khám phá sản phẩm được chọn lọc, thông tin hữu ích và những kiến thức giúp bạn chăm sóc sức
+                            khỏe chủ động cho bản thân và gia đình.
+                        </p>
+                        <a href="#san-pham" class="showcase-main-button">
+                            Xem sản phẩm
+                            <span>→</span>
+                        </a>
+                    </div>
+
+                    <!-- BÊN PHẢI -->
+                    <div class="showcase-visual">
+                        <!-- VÒNG QUỸ ĐẠO -->
+                        <div class="orbit orbit-one"></div>
+                        <div class="orbit orbit-two"></div>
+                        <div class="orbit orbit-three"></div>
+
+                        <!-- LỌ THUỐC -->
+                        <div class="medicine-bottle">
+                            <div class="bottle-cap"></div>
+                            <div class="bottle-neck"></div>
+                            <div class="bottle-body">
+                                <div class="bottle-label">
+                                    <strong>ANĐỨC6</strong>
+                                    <small>HEALTHCARE</small>
+                                    <div class="bottle-symbol">+</div>
+                                    <span>CHĂM SÓC</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- VIÊN NANG -->
+                        <div class="capsule capsule-one"><span></span></div>
+                        <div class="capsule capsule-two"><span></span></div>
+                        <div class="capsule capsule-three"><span></span></div>
+
+                        <!-- VIÊN THUỐC TRÒN -->
+                        <div class="tablet tablet-one"></div>
+                        <div class="tablet tablet-two"></div>
+
+                        <!-- ICON Y TẾ -->
+                        <div class="health-badge badge-one">
+                            <span>+</span>
+                            <small>Sức khỏe</small>
+                        </div>
+                        <div class="health-badge badge-two">
+                            <span>♡</span>
+                            <small>Đồng hành</small>
+                        </div>
+                        <div class="health-badge badge-three">
+                            <span>✓</span>
+                            <small>Chọn lọc</small>
                         </div>
                     </div>
                 </div>
 
-                <!-- VIÊN NANG -->
-                <div class="capsule capsule-one"><span></span></div>
-                <div class="capsule capsule-two"><span></span></div>
-                <div class="capsule capsule-three"><span></span></div>
+                <!-- DÒNG CUỐI -->
+                <div class="showcase-bottom">
+                    <span>Thông tin minh bạch</span>
+                    <i></i>
+                    <span>Sản phẩm chọn lọc</span>
+                    <i></i>
+                    <span>Đồng hành lâu dài</span>
+                </div>
 
-                <!-- VIÊN THUỐC TRÒN -->
-                <div class="tablet tablet-one"></div>
-                <div class="tablet tablet-two"></div>
-
-                <!-- ICON Y TẾ -->
-                <div class="health-badge badge-one">
-                    <span>+</span>
-                    <small>Sức khỏe</small>
-                </div>
-                <div class="health-badge badge-two">
-                    <span>♡</span>
-                    <small>Đồng hành</small>
-                </div>
-                <div class="health-badge badge-three">
-                    <span>✓</span>
-                    <small>Chọn lọc</small>
-                </div>
             </div>
-        </div>
+        </section>
 
-        <!-- DÒNG CUỐI -->
-        <div class="showcase-bottom">
-            <span>Thông tin minh bạch</span>
-            <i></i>
-            <span>Sản phẩm chọn lọc</span>
-            <i></i>
-            <span>Đồng hành lâu dài</span>
-        </div>
-
-    </div>
-</section>
-
-<!-- =========================================================
+        <!-- =========================================================
      MÔ HÌNH GIẢI PHẪU CƠ THỂ NGƯỜI 3D (NÂNG CẤP SẮC SẢO)
      ========================================================= -->
-<section class="anatomy-section" id="giai-phau">
-    <div class="anatomy-container">
-        
-        <!-- Tiêu đề bách khoa y khoa -->
-        <div class="anatomy-heading">
-            <span class="eyebrow">BÁCH KHOA Y KHOA AN ĐỨC 6</span>
-            <h2>Mô Hình Giải Phẫu Cơ Thể Người 3D</h2>
-            <p>Khám phá sơ đồ minh họa các hệ cơ quan. Chạm vào các điểm tương tác để đọc thông tin tham khảo về từng cơ quan.</p>
-        </div>
+        <section class="anatomy-section" id="giai-phau">
+            <div class="anatomy-container">
 
-        <!-- Khung nền xanh nhạt sang trọng, tràn viền mở rộng -->
-        <div class="anatomy-stage">
-            
-            <!-- Vòng tròn trang trí ánh sáng tinh tế -->
-            <div class="stage-glow glow-1"></div>
-            <div class="stage-glow glow-2"></div>
+                <!-- Tiêu đề bách khoa y khoa -->
+                <div class="anatomy-heading">
+                    <span class="eyebrow">BÁCH KHOA Y KHOA AN ĐỨC 6</span>
+                    <h2>Mô Hình Giải Phẫu Cơ Thể Người 3D</h2>
+                    <p>Khám phá sơ đồ minh họa các hệ cơ quan. Chạm vào các điểm tương tác để đọc thông tin tham khảo về
+                        từng cơ quan.</p>
+                </div>
 
-            <!-- Bố cục chính: Ảnh mô hình bên trái (lớn) & Bảng thông tin chi tiết bên phải -->
-            <div class="anatomy-content-wrapper">
-                
-                <!-- Khu vực hiển thị ảnh 3D và các điểm chấm tương tác khớp chuẩn -->
-                <div class="anatomy-visual-box">
-                    <img src="images/giai_phau_3d.webp" alt="Sơ đồ minh họa các cơ quan trong cơ thể người: não, tim, phổi, gan, dạ dày, ruột, xương khớp và hệ miễn dịch" class="anatomy-main-img">
-                    
-                    <!-- CÁC ĐIỂM CHẤM TƯƠNG TÁC -->
-                    <!-- 1. Não bộ -->
-                    <button class="anatomy-hotspot" style="top: 17%; left: 35%;" data-organ="nao" aria-label="Não bộ">
-                        <span class="pulse-ring"></span>
-                        <span class="dot-core"></span>
-                    </button>
+                <!-- Khung nền xanh nhạt sang trọng, tràn viền mở rộng -->
+                <div class="anatomy-stage">
 
-                    <!-- 2. Phổi -->
-                    <button class="anatomy-hotspot" style="top: 31%; left: 32%;" data-organ="phoi" aria-label="Hệ hô hấp">
-                        <span class="pulse-ring"></span>
-                        <span class="dot-core"></span>
-                    </button>
+                    <!-- Vòng tròn trang trí ánh sáng tinh tế -->
+                    <div class="stage-glow glow-1"></div>
+                    <div class="stage-glow glow-2"></div>
 
-                    <!-- 3. Dạ dày -->
-                    <button class="anatomy-hotspot" style="top: 50%; left: 30%;" data-organ="daday" aria-label="Hệ tiêu hóa">
-                        <span class="pulse-ring"></span>
-                        <span class="dot-core"></span>
-                    </button>
+                    <!-- Bố cục chính: Ảnh mô hình bên trái (lớn) & Bảng thông tin chi tiết bên phải -->
+                    <div class="anatomy-content-wrapper">
 
-                    <!-- 4. Xương khớp -->
-                    <button class="anatomy-hotspot" style="top: 70%; left: 35%;" data-organ="xuongkhop" aria-label="Hệ vận động">
-                        <span class="pulse-ring"></span>
-                        <span class="dot-core"></span>
-                    </button>
+                        <!-- Khu vực hiển thị ảnh 3D và các điểm chấm tương tác khớp chuẩn -->
+                        <div class="anatomy-visual-box">
+                            <img src="images/giai_phau_3d.webp"
+                                alt="Sơ đồ minh họa các cơ quan trong cơ thể người: não, tim, phổi, gan, dạ dày, ruột, xương khớp và hệ miễn dịch"
+                                class="anatomy-main-img">
 
-                    <!-- 5. Tim mạch -->
-                    <button class="anatomy-hotspot" style="top: 23%; left: 68%;" data-organ="tim" aria-label="Tim mạch">
-                        <span class="pulse-ring"></span>
-                        <span class="dot-core"></span>
-                    </button>
+                            <!-- CÁC ĐIỂM CHẤM TƯƠNG TÁC -->
+                            <!-- 1. Não bộ -->
+                            <button class="anatomy-hotspot" style="top: 17%; left: 35%;" data-organ="nao"
+                                aria-label="Não bộ">
+                                <span class="pulse-ring"></span>
+                                <span class="dot-core"></span>
+                            </button>
 
-                    <!-- 6. Gan -->
-                    <button class="anatomy-hotspot" style="top: 38%; left: 70%;" data-organ="gan" aria-label="Hệ gan mật">
-                        <span class="pulse-ring"></span>
-                        <span class="dot-core"></span>
-                    </button>
+                            <!-- 2. Phổi -->
+                            <button class="anatomy-hotspot" style="top: 31%; left: 32%;" data-organ="phoi"
+                                aria-label="Hệ hô hấp">
+                                <span class="pulse-ring"></span>
+                                <span class="dot-core"></span>
+                            </button>
 
-                    <!-- 7. Ruột -->
-                    <button class="anatomy-hotspot" style="top: 55%; left: 69%;" data-organ="ruot" aria-label="Hệ tiêu hóa ruột">
-                        <span class="pulse-ring"></span>
-                        <span class="dot-core"></span>
-                    </button>
+                            <!-- 3. Dạ dày -->
+                            <button class="anatomy-hotspot" style="top: 50%; left: 30%;" data-organ="daday"
+                                aria-label="Hệ tiêu hóa">
+                                <span class="pulse-ring"></span>
+                                <span class="dot-core"></span>
+                            </button>
 
-                    <!-- 8. Hệ miễn dịch -->
-                    <button class="anatomy-hotspot" style="top: 73%; left: 66%;" data-organ="miendich" aria-label="Hệ miễn dịch">
-                        <span class="pulse-ring"></span>
-                        <span class="dot-core"></span>
-                    </button>
+                            <!-- 4. Xương khớp -->
+                            <button class="anatomy-hotspot" style="top: 70%; left: 35%;" data-organ="xuongkhop"
+                                aria-label="Hệ vận động">
+                                <span class="pulse-ring"></span>
+                                <span class="dot-core"></span>
+                            </button>
+
+                            <!-- 5. Tim mạch -->
+                            <button class="anatomy-hotspot" style="top: 23%; left: 68%;" data-organ="tim"
+                                aria-label="Tim mạch">
+                                <span class="pulse-ring"></span>
+                                <span class="dot-core"></span>
+                            </button>
+
+                            <!-- 6. Gan -->
+                            <button class="anatomy-hotspot" style="top: 38%; left: 70%;" data-organ="gan"
+                                aria-label="Hệ gan mật">
+                                <span class="pulse-ring"></span>
+                                <span class="dot-core"></span>
+                            </button>
+
+                            <!-- 7. Ruột -->
+                            <button class="anatomy-hotspot" style="top: 55%; left: 69%;" data-organ="ruot"
+                                aria-label="Hệ tiêu hóa ruột">
+                                <span class="pulse-ring"></span>
+                                <span class="dot-core"></span>
+                            </button>
+
+                            <!-- 8. Hệ miễn dịch -->
+                            <button class="anatomy-hotspot" style="top: 73%; left: 66%;" data-organ="miendich"
+                                aria-label="Hệ miễn dịch">
+                                <span class="pulse-ring"></span>
+                                <span class="dot-core"></span>
+                            </button>
+
+                        </div>
+
+                        <!-- Bảng hiển thị thông tin tra cứu bên phải -->
+                        <div class="anatomy-details-panel" id="anatomyDetailsPanel">
+                            <div class="panel-top-bar">
+                                <span id="anatomyCategory" class="panel-tag">HỆ THỐNG Y KHOA AN ĐỨC 6</span>
+                                <button class="panel-close-btn" id="anatomyCloseBtn" aria-label="Đóng">×</button>
+                            </div>
+
+                            <div class="panel-body">
+                                <h3 id="anatomyTitle">Chạm vào các bộ phận trên mô hình</h3>
+                                <p id="anatomyDescription">Khám phá thông tin chi tiết về từng hệ cơ quan bằng cách
+                                    click vào các vòng tròn phát sáng trên ảnh mô hình 3D bên cạnh.</p>
+
+                                <div class="panel-suggestion">
+                                    <strong>💡 Lưu ý sức khỏe:</strong>
+                                    <span id="anatomyAdvice">Chủ động tra cứu giúp bạn hiểu rõ hơn về tình trạng sức
+                                        khỏe của cơ thể mỗi ngày.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
 
                 </div>
 
-                <!-- Bảng hiển thị thông tin tra cứu bên phải -->
-                <div class="anatomy-details-panel" id="anatomyDetailsPanel">
-                    <div class="panel-top-bar">
-                        <span id="anatomyCategory" class="panel-tag">HỆ THỐNG Y KHOA AN ĐỨC 6</span>
-                        <button class="panel-close-btn" id="anatomyCloseBtn" aria-label="Đóng">×</button>
+            </div>
+        </section>
+
+        <!-- =========================================================
+     PRODUCTS (GIAO DIỆN SEED STYLE)
+     ========================================================= -->
+        <section class="products-section" id="san-pham">
+            <div class="container">
+
+                <!-- PHẦN TIÊU ĐỀ VÀ TÌM KIẾM -->
+                <div class="products-header-row">
+                    <div class="products-title">
+                        <h2>Tra cứu thông tin<br>y khoa</h2>
                     </div>
-                    
-                    <div class="panel-body">
-                        <h3 id="anatomyTitle">Chạm vào các bộ phận trên mô hình</h3>
-                        <p id="anatomyDescription">Khám phá thông tin chi tiết về từng hệ cơ quan bằng cách click vào các vòng tròn phát sáng trên ảnh mô hình 3D bên cạnh.</p>
-                        
-                        <div class="panel-suggestion">
-                            <strong>💡 Lưu ý sức khỏe:</strong>
-                            <span id="anatomyAdvice">Chủ động tra cứu giúp bạn hiểu rõ hơn về tình trạng sức khỏe của cơ thể mỗi ngày.</span>
+
+                    <div class="products-actions">
+                        <p>Các sản phẩm đã được nhà thuốc xem xét kĩ lưỡng về chất lượng và đầy đủ giấy tờ pháp lý</p>
+                        <!-- Ô tìm kiếm giao diện tối -->
+                        <div class="dark-search-box">
+                            <input type="text" id="productSearchInput" placeholder="Tìm kiếm sản phẩm...">
+                            <span>🔍</span>
                         </div>
                     </div>
                 </div>
 
-            </div>
+                <!-- LƯỚI HIỂN THỊ SẢN PHẨM -->
+                <div class="product-grid" id="productGrid"></div>
 
-        </div>
-
-    </div>
-</section>
-
-<!-- =========================================================
-     PRODUCTS (GIAO DIỆN SEED STYLE)
-     ========================================================= -->
-<section class="products-section" id="san-pham">
-    <div class="container">
-        
-        <!-- PHẦN TIÊU ĐỀ VÀ TÌM KIẾM -->
-        <div class="products-header-row">
-            <div class="products-title">
-                <h2>Tra cứu thông tin<br>y khoa</h2>
-            </div>
-            
-            <div class="products-actions">
-                <p>Các sản phẩm đã được nhà thuốc xem xét kĩ lưỡng về chất lượng và đầy đủ giấy tờ pháp lý</p>
-                <!-- Ô tìm kiếm giao diện tối -->
-                <div class="dark-search-box">
-                    <input type="text" id="productSearchInput" placeholder="Tìm kiếm sản phẩm...">
-                    <span>🔍</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- LƯỚI HIỂN THỊ SẢN PHẨM -->
-        <div class="product-grid" id="productGrid"></div>
-
-        <!-- NÚT XEM THÊM -->
-        <!-- SỬA LỖI: khối này trước đây bị hỏng cú pháp HTML (button không có
+                <!-- NÚT XEM THÊM -->
+                <!-- SỬA LỖI: khối này trước đây bị hỏng cú pháp HTML (button không có
              thẻ mở, thiếu id="loadMoreBtn") khiến home-script.js không tìm thấy
              nút -> trang chủ luôn bị "kẹt" chỉ hiển thị 4 sản phẩm đầu tiên.
              Đã tách rõ 2 hành động: (1) nút "Xem thêm" tải thêm sản phẩm ngay
              trên trang chủ, (2) link sang trang Từ Điển Y Khoa đầy đủ. -->
-        <div id="loadMoreContainer" class="load-more-container" style="display: none;">
-            <button type="button" id="loadMoreBtn" class="shop-btn">Xem thêm sản phẩm →</button>
-            <a href="bach_khoa.html" class="shop-btn highlight-btn">Xem toàn bộ Từ Điển Y Khoa →</a>
-        </div>
+                <div id="loadMoreContainer" class="load-more-container" style="display: none;">
+                    <button type="button" id="loadMoreBtn" class="shop-btn">Xem thêm sản phẩm →</button>
+                    <a href="bach_khoa.html" class="shop-btn highlight-btn">Xem toàn bộ Từ Điển Y Khoa →</a>
+                </div>
 
-    </div>
-</section>
+            </div>
+        </section>
 
-<!-- =========================================================
+        <!-- =========================================================
      KHUNG CÔNG NGHỆ VIÊN NANG (GIAO DIỆN QUỐC TẾ)
      ========================================================= -->
-<section class="tech-showcase-section" id="cong-nghe">
-    <div class="tech-showcase-container">
-        
-        <div class="tech-content-box">
-            
-            <!-- NỬA BÊN TRÁI: TIÊU ĐỀ & THÔNG SỐ -->
-            <div class="tech-left">
-                <span class="tech-eyebrow"><span class="dot"></span> KIẾN THỨC THAM KHẢO · VIÊN NANG KÉP</span>
-                <h2>
-                    Vì sao nhiều lợi khuẩn khó sống sót qua dạ dày—<strong>và cách bào chế giúp hỗ trợ điều đó.</strong>
-                </h2>
-                
-                <div class="tech-stats-badge">
-                    <div class="stats-text">
-                        <span class="badge-tag">MINH HỌA</span> Cấu trúc<br>viên nang kép
-                    </div>
-                    <div class="stats-number">2 lớp</div>
-                </div>
+        <section class="tech-showcase-section" id="cong-nghe">
+            <div class="tech-showcase-container">
 
-                <p class="tech-footnote">*Hình minh họa mang tính giới thiệu kiến thức chung, không đại diện cho một sản phẩm cụ thể. Khả năng sống sót của lợi khuẩn phụ thuộc vào chủng vi sinh và công thức của từng sản phẩm.</p>
-            </div>
+                <div class="tech-content-box">
 
-            <!-- NỬA BÊN PHẢI: VIÊN NANG 3D & CHÚ THÍCH -->
-            <div class="tech-right">
-                <div class="tech-capsule-wrapper">
-                    
-                    <!-- Chú thích Trái (Chỉ vào nắp trên) -->
-                    <div class="tech-label label-outer">
-                        <strong>VIÊN NANG NGOÀI</strong>
-                        <p>Lớp vỏ ngoài được thiết kế nhằm hạn chế tác động của axit dạ dày lên phần bên trong.</p>
-                    </div>
+                    <!-- NỬA BÊN TRÁI: TIÊU ĐỀ & THÔNG SỐ -->
+                    <div class="tech-left">
+                        <span class="tech-eyebrow"><span class="dot"></span> KIẾN THỨC THAM KHẢO · VIÊN NANG KÉP</span>
+                        <h2>
+                            Vì sao nhiều lợi khuẩn khó sống sót qua dạ dày—<strong>và cách bào chế giúp hỗ trợ điều
+                                đó.</strong>
+                        </h2>
 
-                    <!-- Cấu trúc viên nang tách rời (Nâng cấp hiệu ứng nổ) -->
-                    <div class="capsule-3d">
-                        <div class="cap-top"></div>
-                        <div class="cap-dust">
-                            <div class="dust-particle p1"></div>
-                            <div class="dust-particle p2"></div>
-                            <div class="dust-particle p3"></div>
-                            <div class="dust-particle p4"></div>
-                            <div class="dust-particle p5"></div>
-                            <div class="dust-particle p6"></div>
+                        <div class="tech-stats-badge">
+                            <div class="stats-text">
+                                <span class="badge-tag">MINH HỌA</span> Cấu trúc<br>viên nang kép
+                            </div>
+                            <div class="stats-number">2 lớp</div>
                         </div>
-                        <div class="cap-bottom"></div>
+
+                        <p class="tech-footnote">*Hình minh họa mang tính giới thiệu kiến thức chung, không đại diện cho
+                            một sản phẩm cụ thể. Khả năng sống sót của lợi khuẩn phụ thuộc vào chủng vi sinh và công
+                            thức của từng sản phẩm.</p>
                     </div>
 
-                    <!-- Chú thích Phải (Chỉ vào bột lõi) -->
-                    <div class="tech-label label-inner">
-                        <strong>VIÊN NANG TRONG</strong>
-                        <p>Chứa thành phần hoạt chất, được thiết kế để giải phóng ở đường ruột.</p>
+                    <!-- NỬA BÊN PHẢI: VIÊN NANG 3D & CHÚ THÍCH -->
+                    <div class="tech-right">
+                        <div class="tech-capsule-wrapper">
+
+                            <!-- Chú thích Trái (Chỉ vào nắp trên) -->
+                            <div class="tech-label label-outer">
+                                <strong>VIÊN NANG NGOÀI</strong>
+                                <p>Lớp vỏ ngoài được thiết kế nhằm hạn chế tác động của axit dạ dày lên phần bên trong.
+                                </p>
+                            </div>
+
+                            <!-- Cấu trúc viên nang tách rời (Nâng cấp hiệu ứng nổ) -->
+                            <div class="capsule-3d">
+                                <div class="cap-top"></div>
+                                <div class="cap-dust">
+                                    <div class="dust-particle p1"></div>
+                                    <div class="dust-particle p2"></div>
+                                    <div class="dust-particle p3"></div>
+                                    <div class="dust-particle p4"></div>
+                                    <div class="dust-particle p5"></div>
+                                    <div class="dust-particle p6"></div>
+                                </div>
+                                <div class="cap-bottom"></div>
+                            </div>
+
+                            <!-- Chú thích Phải (Chỉ vào bột lõi) -->
+                            <div class="tech-label label-inner">
+                                <strong>VIÊN NANG TRONG</strong>
+                                <p>Chứa thành phần hoạt chất, được thiết kế để giải phóng ở đường ruột.</p>
+                            </div>
+
+                        </div>
                     </div>
 
                 </div>
+
             </div>
+        </section>
 
-        </div>
-
-    </div>
-</section>
-
-<!-- =========================================================
+        <!-- =========================================================
      BLOG & KNOWLEDGE (BÀI VIẾT NỔI BẬT)
      ========================================================= -->
-<section class="blog-section" id="kien-thuc">
-    <div class="container">
-        
-        <!-- HEADER CỦA PHẦN TIN TỨC -->
-        <div class="blog-header">
-            <h2 class="blog-section-title">BÀI VIẾT NỔI BẬT</h2>
-        </div>
+        <section class="blog-section" id="kien-thuc">
+            <div class="container">
 
-        <!-- LƯỚI BÀI BÁO (3 CỘT) -->
-        <div class="blog-grid" id="blogGrid">
-            <!-- Dữ liệu bài viết sẽ được JavaScript tự động điền vào đây -->
-        </div>
+                <!-- HEADER CỦA PHẦN TIN TỨC -->
+                <div class="blog-header">
+                    <h2 class="blog-section-title">BÀI VIẾT NỔI BẬT</h2>
+                </div>
 
-    </div>
-</section>
-<!-- =========================================================
+                <!-- LƯỚI BÀI BÁO (3 CỘT) -->
+                <div class="blog-grid" id="blogGrid">
+                    <!-- Dữ liệu bài viết sẽ được JavaScript tự động điền vào đây -->
+                </div>
+
+            </div>
+        </section>
+        <!-- =========================================================
      ABOUT (VỀ CHÚNG TÔI - BENTO GRID NÂNG CẤP)
      ========================================================= -->
-<section class="about-section" id="ve-chung-toi">
-    <!-- Ép width riêng cho container này để bung rộng ra cân bằng với trang -->
-    <div class="container" style="width: min(1550px, calc(100% - 40px)); max-width: none;">
-        
-        <div class="about-bento-grid">
-            
-            <!-- KHỐI LỚN BÊN TRÁI -->
-            <div class="bento-main-card">
-                <div class="bento-content">
-                    <span class="eyebrow">VỀ CHÚNG TÔI</span>
-                    <h2>Nhà Thuốc An Đức 6</h2>
-                    <p>Nhà Thuốc An Đức 6 xây dựng trang này để chia sẻ kiến thức sức khỏe dễ hiểu, giúp bạn và gia đình chủ động tìm hiểu trước khi trao đổi với bác sĩ hoặc dược sĩ.</p>
-                    <a href="bach_khoa.html" class="bento-btn">Tra cứu Bách Khoa Y Khoa</a>
+        <section class="about-section" id="ve-chung-toi">
+            <!-- Ép width riêng cho container này để bung rộng ra cân bằng với trang -->
+            <div class="container" style="width: min(1550px, calc(100% - 40px)); max-width: none;">
+
+                <div class="about-bento-grid">
+
+                    <!-- KHỐI LỚN BÊN TRÁI -->
+                    <div class="bento-main-card">
+                        <div class="bento-content">
+                            <span class="eyebrow">VỀ CHÚNG TÔI</span>
+                            <h2>Nhà Thuốc An Đức 6</h2>
+                            <p>Nhà Thuốc An Đức 6 xây dựng trang này để chia sẻ kiến thức sức khỏe dễ hiểu, giúp bạn và
+                                gia đình chủ động tìm hiểu trước khi trao đổi với bác sĩ hoặc dược sĩ.</p>
+                            <a href="bach_khoa.html" class="bento-btn">Tra cứu Bách Khoa Y Khoa</a>
+                        </div>
+
+                        <div class="bento-image-wrap">
+                            <img src="images/bua_an_dinh_duong.webp" alt="Mặt tiền Nhà Thuốc An Đức 6">
+                        </div>
+                    </div>
+
+                    <!-- 3 KHỐI NHỎ XẾP DỌC BÊN PHẢI -->
+                    <div class="bento-side-cards">
+
+                        <div class="bento-small-card">
+                            <div class="bento-text">
+                                <span class="bento-tag">01</span>
+                                <strong>Minh bạch</strong>
+                                <p>Cam kết 100% thông tin thành phần, nguồn gốc xuất xứ và tư vấn y khoa được công khai
+                                    rõ ràng, trung thực.</p>
+                            </div>
+                            <div class="bento-arrow">→</div>
+                        </div>
+
+                        <div class="bento-small-card">
+                            <div class="bento-text">
+                                <span class="bento-tag">02</span>
+                                <strong>Thận trọng</strong>
+                                <p>Chỉ đăng thông tin có căn cứ, không thay thế chẩn đoán hay điều trị.</p>
+                            </div>
+                            <div class="bento-arrow">→</div>
+                        </div>
+
+                        <div class="bento-small-card">
+                            <div class="bento-text">
+                                <span class="bento-tag">03</span>
+                                <strong>Dễ tiếp cận</strong>
+                                <p>Sẵn sàng lắng nghe, tư vấn tận tâm và sát cánh cùng khách hàng trên hành trình chăm
+                                    sóc sức khỏe trọn đời.</p>
+                            </div>
+                            <div class="bento-arrow">→</div>
+                        </div>
+
+                    </div>
+
                 </div>
-                
-                <div class="bento-image-wrap">
-                    <img src="images/bua_an_dinh_duong.webp" alt="Mặt tiền Nhà Thuốc An Đức 6">
-                </div>
+
             </div>
-
-            <!-- 3 KHỐI NHỎ XẾP DỌC BÊN PHẢI -->
-            <div class="bento-side-cards">
-                
-                <div class="bento-small-card">
-                    <div class="bento-text">
-                        <span class="bento-tag">01</span>
-                        <strong>Minh bạch</strong>
-                        <p>Cam kết 100% thông tin thành phần, nguồn gốc xuất xứ và tư vấn y khoa được công khai rõ ràng, trung thực.</p>
-                    </div>
-                    <div class="bento-arrow">→</div>
-                </div>
-
-                <div class="bento-small-card">
-                    <div class="bento-text">
-                        <span class="bento-tag">02</span>
-                        <strong>Thận trọng</strong>
-                        <p>Chỉ đăng thông tin có căn cứ, không thay thế chẩn đoán hay điều trị.</p>
-                    </div>
-                    <div class="bento-arrow">→</div>
-                </div>
-
-                <div class="bento-small-card">
-                    <div class="bento-text">
-                        <span class="bento-tag">03</span>
-                        <strong>Dễ tiếp cận</strong>
-                        <p>Sẵn sàng lắng nghe, tư vấn tận tâm và sát cánh cùng khách hàng trên hành trình chăm sóc sức khỏe trọn đời.</p>
-                    </div>
-                    <div class="bento-arrow">→</div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-</section>
+        </section>
 
 
-<!-- =========================================================
+        <!-- =========================================================
      FOOTER (GIAO DIỆN QUỐC TẾ - SEED STYLE)
      ========================================================= -->
-<footer class="site-footer">
+        <footer class="site-footer">
     <div class="footer-container">
         <div class="footer-top">
 
-            <!-- CỘT TRÁI: LOGO, SLOGAN, NEWSLETTER, DISCLAIMER -->
+            <!-- CỘT TRÁI: LOGO, SLOGAN, DISCLAIMER -->
             <div class="footer-left">
                 <a href="#trang-chu" class="footer-logo">
                     ANĐỨC6<span class="logo-dot"></span>
                 </a>
-                
+
                 <h2 class="footer-tagline">
                     Chia sẻ kiến thức sức khỏe dễ hiểu cho cộng đồng.
                 </h2>
 
                 <div class="footer-disclaimer">
-                     Thông tin trên website chỉ mang tính tham khảo, không thay thế tư vấn, chẩn đoán hay điều trị của bác sĩ. Thực phẩm bảo vệ sức khỏe không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh.
+                    Thông tin trên website chỉ mang tính tham khảo, không thay thế tư vấn, chẩn đoán hay điều trị của bác sĩ. Thực phẩm bảo vệ sức khỏe không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh.
                 </div>
             </div>
 
             <!-- CỘT PHẢI: LƯỚI MENU DANH MỤC -->
             <div class="footer-right">
                 <div class="footer-link-grid">
-                <div class="link-group">
-                    <strong>TRA CỨU</strong>
-                    <a href="bach_khoa.html">Từ điển y khoa</a>
-                    <a href="index.html#kien-thuc">Bài viết kiến thức</a>
-                    <a href="index.html#giai-phau">Sơ đồ cơ thể</a>
-                </div>
 
-                <div class="link-group">
-                    <strong>THÔNG TIN</strong>
-                    <a href="gioi_thieu.html">Giới thiệu</a>
-                    <a href="lien_he.html">Liên hệ</a>
-                    <a href="chinh_sach_bao_mat.html">Chính sách bảo mật</a>
-                </div>
+                    <div class="link-group">
+                        <strong>TRA CỨU</strong>
+                        <a href="bach_khoa.html">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                            Từ điển y khoa
+                        </a>
+                        <a href="index.html#kien-thuc">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+                            Bài viết kiến thức
+                        </a>
+                        <a href="index.html#giai-phau">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7v13"/><path d="M8 11l4-2 4 2"/><path d="M8 21l2-5"/><path d="M16 21l-2-5"/></svg>
+                            Sơ đồ cơ thể
+                        </a>
+                    </div>
 
-                <div class="link-group">
-                    <strong>KẾT NỐI</strong>
-                    <a href="https://www.tiktok.com/@da.liu.ds.tuyn?_r=1&_t=ZS-99imCmG3Syq" target="_blank" rel="noopener">TikTok</a>
-                    <a href="https://www.facebook.com/share/18Qjxf9b3w/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a>
+                    <div class="link-group">
+                        <strong>THÔNG TIN</strong>
+                        <a href="gioi_thieu.html">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                            Giới thiệu
+                        </a>
+                        <a href="lien_he.html">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            Liên hệ
+                        </a>
+                        <a href="chinh_sach_bao_mat.html">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            Chính sách bảo mật
+                        </a>
+                    </div>
+
+                    <div class="link-group">
+                        <strong>KẾT NỐI</strong>
+                        <a href="https://www.tiktok.com/@da.liu.ds.tuyn?_r=1&_t=ZS-99imCmG3Syq" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18a4 4 0 1 0 4-4V2h4a5 5 0 0 0 5 5"/></svg>
+                            TikTok
+                        </a>
+                        <a href="https://www.facebook.com/share/18Qjxf9b3w/?mibextid=wwXIfr" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                            Facebook
+                        </a>
+                    </div>
+
                 </div>
-                </div>
+            </div>
 
         </div>
     </div>
 </footer>
 
-<!-- =========================================================
+        <!-- =========================================================
      PRODUCT MODAL
      ========================================================= -->
-<div class="modal" id="productModal" aria-hidden="true">
-    <div class="modal-overlay" data-close-modal></div>
-    <div class="modal-box">
-        <button class="modal-close" data-close-modal aria-label="Đóng" type="button">×</button>
-        
-        <span class="eyebrow">THÔNG TIN SẢN PHẨM</span>
-        <h2 id="modalProductName">Sản phẩm</h2>
-        
-        <div class="modal-product-layout">
-            <div class="modal-product-image-wrap" id="modalProductImageWrap">
-                <img id="modalProductImage" class="modal-product-image" src="" alt="">
-            </div>
+        <div class="modal" id="productModal" aria-hidden="true">
+            <div class="modal-overlay" data-close-modal></div>
+            <div class="modal-box">
+                <button class="modal-close" data-close-modal aria-label="Đóng" type="button">×</button>
 
-            <div class="modal-product-content">
-                <span id="modalProductCategory" class="modal-product-category"></span>
-                <p id="modalProductDescription"></p>
+                <span class="eyebrow">THÔNG TIN SẢN PHẨM</span>
+                <h2 id="modalProductName">Sản phẩm</h2>
 
-                <div class="modal-detail">
-                    <strong>Thành phần</strong>
-                    <p id="modalIngredients"></p>
-                </div>
-                <div class="modal-detail">
-                    <strong>Công dụng</strong>
-                    <p id="modalBenefits"></p>
-                </div>
-                <div class="modal-detail">
-                    <strong>Cách sử dụng</strong>
-                    <p id="modalUsage"></p>
-                </div>
-                <div class="modal-detail">
-                    <strong>Đối tượng sử dụng</strong>
-                    <p id="modalUsers"></p>
-                </div>
-                <div class="modal-note">
-                    <p id="modalNote"></p>
+                <div class="modal-product-layout">
+                    <div class="modal-product-image-wrap" id="modalProductImageWrap">
+                        <img id="modalProductImage" class="modal-product-image" src="" alt="">
+                    </div>
+
+                    <div class="modal-product-content">
+                        <span id="modalProductCategory" class="modal-product-category"></span>
+                        <p id="modalProductDescription"></p>
+
+                        <div class="modal-detail">
+                            <strong>Thành phần</strong>
+                            <p id="modalIngredients"></p>
+                        </div>
+                        <div class="modal-detail">
+                            <strong>Công dụng</strong>
+                            <p id="modalBenefits"></p>
+                        </div>
+                        <div class="modal-detail">
+                            <strong>Cách sử dụng</strong>
+                            <p id="modalUsage"></p>
+                        </div>
+                        <div class="modal-detail">
+                            <strong>Đối tượng sử dụng</strong>
+                            <p id="modalUsers"></p>
+                        </div>
+                        <div class="modal-note">
+                            <p id="modalNote"></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<!-- =========================================================
+        <!-- =========================================================
      BLOG MODAL (CỬA SỔ ĐỌC BÀI VIẾT)
      ========================================================= -->
 
 
-<!-- =========================================================
+        <!-- =========================================================
      JAVASCRIPT
      ========================================================= -->
-<script src="products.js"></script>
-<script src="blogs.js"></script>
-<script src="home-script.js"></script>
-<!-- MỚI: xử lý nút chuyển Dark Mode -->
-<script src="theme.js"></script>
+        <script src="products.js"></script>
+        <script src="blogs.js"></script>
+        <script src="home-script.js"></script>
+        <!-- MỚI: xử lý nút chuyển Dark Mode -->
+        <script src="theme.js"></script>
 
 </body>
+
 </html>
