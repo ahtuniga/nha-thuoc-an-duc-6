@@ -192,7 +192,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const title = document.createElement("h3");
         title.className = "card-title-elegant";
-        title.textContent = product.name;
+        title.textContent = product.name; 
 
 
         const imageBox = document.createElement("div");
