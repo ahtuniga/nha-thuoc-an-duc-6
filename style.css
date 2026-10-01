@@ -3384,3 +3384,68 @@ body.article-viewer-open {
         box-sizing: border-box;
     }
 }
+
+/* =========================
+   NÚT VỀ ĐẦU TRANG
+========================= */
+
+.back-to-top {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+
+    width: 48px;
+    height: 48px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #16805c;
+    color: #ffffff;
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease,
+        transform 0.3s ease,
+        background 0.2s ease;
+
+    z-index: 9999;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: #0f684a;
+    transform: translateY(-3px);
+}
+
+/* Điện thoại */
+@media (max-width: 768px) {
+    .back-to-top {
+        right: 16px;
+        bottom: 18px;
+        width: 44px;
+        height: 44px;
+        font-size: 22px;
+    }
+}
