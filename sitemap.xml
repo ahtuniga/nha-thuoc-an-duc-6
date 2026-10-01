@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://YOUR-DOMAIN.vn/</loc>
   </url>
+
   <url>
     <loc>https://YOUR-DOMAIN.vn/bach_khoa.html</loc>
   </url>
+
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/gioi_thieu.html</loc>
+  </url>
+
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/lien_he.html</loc>
+  </url>
+
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/chinh_sach_bao_mat.html</loc>
+  </url>
+
 </urlset>
