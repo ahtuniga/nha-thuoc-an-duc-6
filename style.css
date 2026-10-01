@@ -3260,3 +3260,127 @@ body.article-viewer-open {
     width: 28px;
     height: 28px;
 }
+
+/* =========================================================
+   VỊ TRÍ NHÀ THUỐC - GOOGLE MAPS
+   ========================================================= */
+
+.location-section {
+    width: 100%;
+    padding: 50px 20px;
+}
+
+.location-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 35px;
+    align-items: center;
+
+    padding: 30px;
+    border-radius: 20px;
+    background: var(--card-bg, #ffffff);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.location-info {
+    padding: 10px;
+}
+
+.location-label {
+    display: inline-block;
+    margin-bottom: 12px;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    color: #16805c;
+}
+
+.location-info h2 {
+    margin: 0 0 15px;
+
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+.location-info p {
+    margin: 10px 0;
+    line-height: 1.7;
+}
+
+.location-button {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 12px 20px;
+
+    border-radius: 10px;
+
+    background: #16805c;
+    color: #ffffff;
+
+    text-decoration: none;
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+}
+
+.location-button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.location-map {
+    width: 100%;
+    height: 320px;
+
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.location-map iframe {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    border: 0;
+}
+
+
+/* =========================================================
+   ĐIỆN THOẠI
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .location-section {
+        padding: 35px 15px;
+    }
+
+    .location-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .location-info h2 {
+        font-size: 26px;
+    }
+
+    .location-map {
+        height: 280px;
+    }
+
+    .location-button {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}
