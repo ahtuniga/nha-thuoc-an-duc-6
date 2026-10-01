@@ -38,6 +38,47 @@
 }
 
 /* =========================================================
+   DARK MODE - THÔNG TIN NHÀ THUỐC / GOOGLE MAPS
+   ========================================================= */
+
+:root[data-theme="dark"] .location-container {
+    background: #182420;
+}
+
+:root[data-theme="dark"] .location-info h2 {
+    color: #f1f7f3;
+}
+
+:root[data-theme="dark"] .location-info p {
+    color: #d7e5dc;
+}
+
+:root[data-theme="dark"] .location-label {
+    color: #7fcf9b;
+}
+
+:root[data-theme="dark"] .location-button {
+    background: #3ea968;
+    color: #ffffff;
+}
+
+/* =========================================================
+   DARK MODE - BÀI VIẾT NỔI BẬT
+   ========================================================= */
+
+:root[data-theme="dark"] .blog-section {
+    background: #0f1712;
+}
+
+:root[data-theme="dark"] .blog-section-title {
+    color: #eaf3ec;
+}
+
+:root[data-theme="dark"] .blog-grid {
+    background: transparent;
+}
+
+/* =========================================================
    RESET
    ========================================================= */
 * {
@@ -3267,7 +3308,7 @@ body.article-viewer-open {
 
 .location-section {
     width: 100%;
-    padding: 50px 20px;
+    padding: 50px 20px 10px;
 }
 
 .location-container {
@@ -3277,10 +3318,10 @@ body.article-viewer-open {
 
     display: grid;
     grid-template-columns: 0.8fr 1.2fr;
-    gap: 35px;
+    gap: 30px;
     align-items: center;
 
-    padding: 30px;
+    padding: 25px;
     border-radius: 20px;
     background: var(--card-bg, #ffffff);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
@@ -3448,4 +3489,67 @@ body.article-viewer-open {
         height: 44px;
         font-size: 22px;
     }
+}
+
+/* =========================================================
+   DARK MODE - BÀI VIẾT NỔI BẬT
+   ========================================================= */
+
+/* Nền toàn bộ khu vực bài viết */
+:root[data-theme="dark"] .blog-section {
+    background: #0f1712;
+}
+
+/* Tiêu đề khu vực */
+:root[data-theme="dark"] .blog-section-title {
+    color: #eaf3ec;
+}
+
+/* Lưới bài viết */
+:root[data-theme="dark"] .blog-grid {
+    background: transparent;
+}
+
+/* TỪNG THẺ BÀI VIẾT - XANH MẠ NHẠT */
+:root[data-theme="dark"] .blog-card {
+    background: #b8d8a8;
+    color: #17351f;
+
+    border: 1px solid #91b982;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease,
+                background 0.25s ease;
+}
+
+/* Phần nội dung */
+:root[data-theme="dark"] .blog-content {
+    background: #b8d8a8;
+}
+
+/* Nhãn danh mục */
+:root[data-theme="dark"] .blog-category {
+    color: #176238;
+}
+
+/* Tiêu đề bài viết */
+:root[data-theme="dark"] .blog-title {
+    color: #17351f;
+}
+
+/* Mô tả bài viết */
+:root[data-theme="dark"] .blog-excerpt {
+    color: #31533a;
+}
+
+/* Khi rê chuột */
+:root[data-theme="dark"] .blog-card:hover {
+    background: #c7e2b9;
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.35);
+    transform: translateY(-4px);
+}
+
+:root[data-theme="dark"] .blog-card:hover .blog-content {
+    background: #c7e2b9;
 }
