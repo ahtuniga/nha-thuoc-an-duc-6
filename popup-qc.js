@@ -8,7 +8,7 @@
     var CONFIG = {
         enabled: true,              // đặt false để tắt popup
         delayMs: 3000,              // chờ bao lâu rồi mới hiện (3000 = 3 giây)
-        showAgainAfterHours: 0,    // sau bao nhiêu giờ mới hiện lại với cùng khách
+        showAgainAfterHours: 1,    // sau bao nhiêu giờ mới hiện lại với cùng khách
 
         // Cách 1: dùng ảnh poster. Ví dụ "images/poster-khuyen-mai.webp"
         // Để trống "" thì sẽ hiện thẻ chữ ở Cách 2.
