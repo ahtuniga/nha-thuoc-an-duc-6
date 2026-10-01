@@ -78,6 +78,53 @@
     background: transparent;
 }
 
+:root[data-theme="dark"] .blog-grid {
+    background: transparent;
+}
+
+
+/* DÁN PHẦN NÀY NGAY ĐÂY */
+
+:root[data-theme="dark"] .blog-card {
+    background: #9fc7a8;
+    color: #183b27;
+    border: 1px solid #6fa47e;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+:root[data-theme="dark"] .blog-content {
+    background: #9fc7a8;
+}
+
+:root[data-theme="dark"] .blog-category {
+    color: #24633d;
+}
+
+:root[data-theme="dark"] .blog-title {
+    color: #163a25;
+}
+
+:root[data-theme="dark"] .blog-excerpt {
+    color: #315840;
+}
+
+:root[data-theme="dark"] .blog-card:hover {
+    background: #add2b4;
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.30);
+    transform: translateY(-4px);
+}
+
+:root[data-theme="dark"] .blog-card:hover .blog-content {
+    background: #add2b4;
+}
+
+
 /* =========================================================
    RESET
    ========================================================= */
@@ -1386,6 +1433,7 @@ button {
         height: 250px;
     }
 }
+
 
 /* =========================================================
    VỀ CHÚNG TÔI (BENTO GRID - RỘNG & CUỐN HÚT)
