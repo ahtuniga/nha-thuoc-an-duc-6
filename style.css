@@ -1436,187 +1436,660 @@ button {
 
 
 /* =========================================================
-   VỀ CHÚNG TÔI (BENTO GRID - RỘNG & CUỐN HÚT)
+   VỀ CHÚNG TÔI
+   AN ĐỨC 6 - PREMIUM BENTO
    ========================================================= */
+
 .about-section {
-    padding: 40px 0 120px; /* Trên 40px, Trái/Phải 0, Dưới 120px */
+    padding: 45px 0 75px;
     background: #ffffff;
 }
 
+.about-container {
+    width: min(1420px, calc(100% - 48px));
+    max-width: none;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   GRID
+   ========================= */
+
 .about-bento-grid {
     display: grid;
-    grid-template-columns: 1.15fr 0.85fr; /* Chỉnh lại tỉ lệ cho cân đối khi mở rộng */
-    gap: 40px; /* Tăng khoảng cách giữa khối trái và phải */
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 24px;
+    align-items: stretch;
 }
 
-/* --- KHỐI LỚN BÊN TRÁI --- */
+
+/* =========================
+   KHỐI CHÍNH
+   ========================= */
+
 .bento-main-card {
-    background: linear-gradient(180deg, #eff7f2 0%, #e1ebe5 100%); 
-    border-radius: 40px;
+    min-height: 0;
+
     display: flex;
     flex-direction: column;
+
     overflow: hidden;
     position: relative;
-    box-shadow: 0 20px 50px rgba(20,60,35,0.06);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+    border-radius: 32px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f1f8f4 0%,
+            #e5f0ea 100%
+        );
+
+    border: 1px solid rgba(22, 90, 62, 0.06);
+
+    box-shadow:
+        0 18px 50px rgba(24, 67, 45, 0.07);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
 }
+
 .bento-main-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 30px 60px rgba(20,60,35,0.1);
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 28px 65px rgba(24, 67, 45, 0.11);
 }
+
+
+/* =========================
+   NỘI DUNG KHỐI CHÍNH
+   ========================= */
 
 .bento-content {
-    padding: 70px 70px 40px; /* Tăng padding để nội dung thở */
-    text-align: center;
+    padding: 58px 64px 34px;
+
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+
+    text-align: left;
 }
+
+
+/* Nhãn */
+
+.bento-content .eyebrow {
+    display: inline-flex;
+    align-items: center;
+
+    margin-bottom: 22px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 2.2px;
+
+    color: #147457;
+}
+
+
+/* Tiêu đề */
 
 .bento-content h2 {
-    font-family: 'Playfair Display', Georgia, serif; /* Đổi font Playfair cho sang trọng */
-    color: var(--green-dark);
-    font-size: clamp(38px, 4.5vw, 48px);
-    font-weight: 700;
-    margin-bottom: 25px;
-    letter-spacing: -1px;
+    margin: 0 0 24px;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: clamp(42px, 4vw, 64px);
+
+    line-height: 1.02;
+
+    letter-spacing: -2px;
+
+    font-weight: 600;
+
+    color: #173f2a;
 }
+
+
+/* Đoạn giới thiệu */
 
 .bento-content p {
-    color: var(--text-light);
-    font-size: 16.5px;
-    line-height: 1.7;
-    max-width: 580px;
-    margin-bottom: 40px;
+    max-width: 650px;
+
+    margin: 0 0 14px;
+
+    color: #61756a;
+
+    font-size: 16px;
+
+    line-height: 1.75;
 }
+
+.bento-content .bento-description {
+    margin-bottom: 30px;
+}
+
+.bento-content .bento-description strong {
+    color: #285c43;
+    font-weight: 600;
+}
+
+
+/* =========================
+   BUTTON
+   ========================= */
 
 .bento-btn {
-    background: #0d6e5a; 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+
+    padding: 14px 24px;
+
+    border-radius: 999px;
+
+    background: #0d705b;
     color: #ffffff;
-    padding: 16px 40px;
-    border-radius: 40px;
-    font-size: 15px;
+
+    font-size: 14px;
     font-weight: 600;
-    transition: all 0.3s;
-    box-shadow: 0 10px 20px rgba(13, 110, 90, 0.2);
-}
-.bento-btn:hover {
-    background: #0a5243;
-    transform: translateY(-3px);
-    box-shadow: 0 15px 25px rgba(13, 110, 90, 0.3);
+
+    text-decoration: none;
+
+    box-shadow:
+        0 10px 24px rgba(13, 112, 91, 0.18);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
+.bento-btn span {
+    font-size: 18px;
+    line-height: 1;
+
+    transition: transform 0.3s ease;
+}
+
+.bento-btn:hover {
+    background: #095945;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 28px rgba(13, 112, 91, 0.24);
+}
+
+.bento-btn:hover span {
+    transform: translateX(4px);
+}
+
+
+/* =========================
+   ẢNH
+   ========================= */
+
 .bento-image-wrap {
-    margin-top: auto;
     width: 100%;
-    height: 380px; 
-    display: flex;
-    justify-content: center;
-    align-items: flex-end; 
+    height: 250px;
+
+    margin-top: auto;
+
     overflow: hidden;
+
+    position: relative;
+}
+
+.bento-image-wrap::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(229, 240, 234, 0) 0%,
+            rgba(229, 240, 234, 0.08) 100%
+        );
+
+    pointer-events: none;
 }
 
 .bento-image-wrap img {
     width: 100%;
     height: 100%;
+
+    display: block;
+
     object-fit: cover;
-    object-position: top; 
-    border-radius: 40px 40px 0 0; 
-    transform: translateY(30px); 
-    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-.bento-main-card:hover .bento-image-wrap img {
-    transform: translateY(0) scale(1.02); /* Vừa trồi lên vừa zoom nhẹ */
+
+    object-position: center 42%;
+
+    transition:
+        transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-/* --- 3 KHỐI NHỎ BÊN PHẢI --- */
-.bento-side-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 25px; 
+.bento-main-card:hover .bento-image-wrap img {
+    transform: scale(1.025);
 }
+
+
+/* =========================
+   CỘT PHẢI
+   ========================= */
+
+.bento-side-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    gap: 18px;
+    min-height: 0;
+}
+
+
+/* =========================
+   CARD NHỎ
+   ========================= */
 
 .bento-small-card {
-    background: #f0f7f3;
-    border-radius: 32px;
-    padding: 40px;
+
+    position: relative;
+    min-height: 0;
+
+    padding: 28px 30px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 25px;
-    flex: 1; 
-    cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-    box-shadow: 0 10px 30px rgba(20,60,35,0.03);
-    border: 1px solid transparent;
+
+    gap: 24px;
+
+    border-radius: 28px;
+
+    background: #f2f7f4;
+
+    border: 1px solid rgba(23, 63, 42, 0.05);
+
+    box-shadow:
+        0 10px 30px rgba(24, 67, 45, 0.035);
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
 }
 
-/* HIỆU ỨNG KHI HOVER THẺ NHỎ */
+.bento-card-image {
+    width: 36%;
+    min-width: 150px;
+    height: 170px;
+
+    margin: -28px -30px -28px 10px;
+
+    overflow: hidden;
+
+    border-radius: 0 28px 28px 0;
+
+    flex-shrink: 0;
+}
+
+.bento-card-image img {
+    
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.5s ease;
+    object-position: 40% center;
+}
+
+.bento-small-card:hover .bento-card-image img {
+    transform: scale(1.05);
+}
+/* =========================
+   ẢNH TRONG CARD GIÁ TRỊ
+   ========================= */
+
+.bento-card-image {
+    width: 36%;
+    min-width: 150px;
+    height: 170px;
+
+    margin: -28px -30px -28px 10px;
+
+    overflow: hidden;
+    border-radius: 0 28px 28px 0;
+}
+
+.bento-card-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.5s ease;
+}
+
+.bento-small-card:hover .bento-card-image img {
+    transform: scale(1.05);
+}
+
 .bento-small-card:hover {
     background: #ffffff;
-    transform: translateX(-10px) translateY(-5px); /* Trượt nhẹ lên và sang trái */
-    box-shadow: 0 20px 40px rgba(20,60,35,0.08);
-    border-color: rgba(13, 110, 90, 0.1);
+
+    border-color:
+        rgba(13, 112, 91, 0.12);
+
+    transform: translateX(-5px);
+
+    box-shadow:
+        0 18px 42px rgba(24, 67, 45, 0.09);
+}
+
+
+/* =========================
+   CARD CONTENT
+   ========================= */
+
+.bento-text {
+    min-width: 0;
 }
 
 .bento-tag {
     display: block;
-    font-size: 12px;
+
+    margin-bottom: 14px;
+
+    color: #147457;
+
+    font-size: 11px;
+
     font-weight: 700;
-    color: #0d6e5a;
-    margin-bottom: 10px;
-    letter-spacing: 1px;
+
+    letter-spacing: 1.8px;
 }
 
 .bento-text strong {
     display: block;
-    color: var(--green-dark);
-    font-size: 20px;
-    margin-bottom: 10px;
+
+    margin-bottom: 12px;
+
+    color: #173f2a;
+
+    font-size: 21px;
+
+    font-weight: 650;
+
+    line-height: 1.25;
 }
 
 .bento-text p {
+    max-width: 430px;
+
     margin: 0;
-    font-size: 14.5px;
-    line-height: 1.6;
-    color: var(--text-light);
+
+    color: #65786e;
+
+    font-size: 14px;
+
+    line-height: 1.7;
 }
 
+
+/* =========================
+   MŨI TÊN
+   ========================= */
+
 .bento-arrow {
-    width: 50px;
-    height: 50px;
-    flex-shrink: 0;
-    background: #ffffff;
-    border-radius: 50%;
+    position: absolute;
+
+    right: 20px;
+    bottom: 20px;
+
+    width: 46px;
+    height: 46px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #0d6e5a;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    color: #0d705b;
+
     font-size: 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-    transition: all 0.4s;
+
+    box-shadow:
+        0 8px 20px rgba(20, 60, 35, 0.08);
+
+    z-index: 5;
+
+    transition:
+        background 0.35s ease,
+        color 0.35s ease,
+        transform 0.35s ease;
 }
 
-/* Đổi màu và xoay mũi tên hướng lên chéo khi hover */
 .bento-small-card:hover .bento-arrow {
-    background: #0d6e5a;
+    background: #0d705b;
     color: #ffffff;
-    transform: translateX(5px) rotate(-45deg); 
+
+    transform:
+        translateX(3px)
+        rotate(-45deg);
 }
 
-/* --- RESPONSIVE --- */
-@media (max-width: 1024px) {
-    .about-bento-grid { grid-template-columns: 1fr; gap: 30px; }
-    .bento-image-wrap { height: 300px; }
-    .bento-small-card:hover { transform: translateY(-5px); }
-}
-@media (max-width: 600px) {
-    .about-section .container { width: calc(100% - 32px) !important; }
-    .bento-content { padding: 40px 25px 20px; }
-    .bento-small-card { padding: 30px; flex-direction: column; align-items: flex-start; }
-    .bento-arrow { align-self: flex-end; }
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+:root[data-theme="dark"] .about-section {
+    background: var(--cream);
 }
 
+:root[data-theme="dark"] .bento-main-card {
+    background:
+        linear-gradient(
+            180deg,
+            #182a20 0%,
+            #14231b 100%
+        );
+
+    border-color:
+        rgba(255,255,255,0.05);
+
+    box-shadow:
+        0 18px 50px rgba(0,0,0,0.18);
+}
+
+:root[data-theme="dark"] .bento-content h2 {
+    color: #e6f3e9;
+}
+
+:root[data-theme="dark"] .bento-content p {
+    color: #a8baae;
+}
+
+:root[data-theme="dark"] .bento-content .bento-description strong {
+    color: #b8ddc5;
+}
+
+:root[data-theme="dark"] .bento-small-card {
+    background: #182a20;
+
+    border-color:
+        rgba(255,255,255,0.05);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.12);
+}
+
+:root[data-theme="dark"] .bento-small-card:hover {
+    background: #1d3327;
+
+    border-color:
+        rgba(111, 219, 159, 0.12);
+}
+
+:root[data-theme="dark"] .bento-text strong {
+    color: #e6f3e9;
+}
+
+:root[data-theme="dark"] .bento-text p {
+    color: #a8baae;
+}
+
+:root[data-theme="dark"] .bento-arrow {
+    background: #20372a;
+    color: #6fdb9f;
+}
+
+:root[data-theme="dark"] .bento-small-card:hover .bento-arrow {
+    background: #0d705b;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .about-bento-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bento-main-card {
+        min-height: auto;
+    }
+
+    .bento-side-cards {
+        min-height: auto;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        grid-template-rows: none;
+    }
+
+    .bento-small-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .bento-arrow {
+        align-self: flex-end;
+    }
+}
+
+
+@media (max-width: 760px) {
+
+    .about-section {
+        padding: 50px 0 80px;
+    }
+
+    .about-container {
+        width: calc(100% - 28px);
+    }
+
+    .bento-content {
+        padding: 42px 26px 30px;
+    }
+
+    .bento-content h2 {
+        font-size: clamp(38px, 11vw, 52px);
+
+        letter-spacing: -1.5px;
+    }
+
+    .bento-content p {
+        font-size: 15px;
+    }
+
+    .bento-image-wrap {
+        height: 260px;
+    }
+
+    .bento-side-cards {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+    .bento-small-card {
+        min-height: 190px;
+
+        padding: 28px 24px;
+
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .bento-arrow {
+        align-self: center;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .bento-main-card {
+        border-radius: 24px;
+    }
+
+    .bento-small-card {
+        border-radius: 22px;
+    }
+
+    .bento-content {
+        padding: 34px 22px 26px;
+    }
+
+    .bento-content h2 {
+        font-size: 40px;
+    }
+
+    .bento-image-wrap {
+        height: 220px;
+    }
+
+    .bento-small-card {
+        min-height: 170px;
+        padding: 24px 20px;
+    }
+
+    .bento-text strong {
+        font-size: 19px;
+    }
+
+    .bento-text p {
+        font-size: 13.5px;
+    }
+
+}
 /* =========================================================
    FOOTER (REDESIGN - SEED THEME)
    ========================================================= */
@@ -3633,4 +4106,22 @@ body.article-viewer-open {
 
 :root[data-theme="dark"] .blog-more-btn:hover {
     background: rgba(207, 232, 213, 0.15);
+}
+
+/* Căn vị trí người trong ảnh */
+
+.bento-small-card:nth-child(2) .bento-card-image img {
+    object-position: 65% center;
+}
+
+.bento-small-card:nth-child(3) .bento-card-image img {
+    object-position: 70% center;
+}
+
+.bento-small-card:nth-child(4) .bento-card-image img {
+    object-position: 65% center;
+}
+/* Căn chủ thể vào giữa khung ảnh */
+.bento-card-image img {
+    object-position: 170% center !important;
 }
