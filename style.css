@@ -4536,7 +4536,7 @@ body.article-viewer-open {
 
 @media (max-width: 900px) {
     .location-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         gap: 8px;
         padding: 12px;
         border-radius: 26px;
@@ -4549,6 +4549,46 @@ body.article-viewer-open {
         gap: 8px;
         padding: 14px 16px;
         font-size: 14px;
-        white-space: nowrap;
+        text-align: center;
     }
+}
+
+/* màn hình rất nhỏ (iPhone SE, Android nhỏ) */
+@media (max-width: 380px) {
+    .location-container { padding: 10px; border-radius: 22px; }
+    .location-info { padding: 18px 8px 10px; }
+    .location-info h2 { font-size: 27px; letter-spacing: -.5px; }
+    .location-list strong { font-size: 15px; }
+    .location-button {
+        gap: 6px;
+        padding: 13px 10px;
+        font-size: 12.5px;
+    }
+    .location-button svg { width: 16px; height: 16px; }
+    .location-map { height: 290px; }
+}
+
+/* điện thoại/máy tính bảng cảm ứng: khóa bản đồ đến khi chạm,
+   để vuốt cuộn trang không bị bản đồ "bắt" mất */
+.location-map.is-locked iframe { pointer-events: none; }
+.location-map.is-locked::before {
+    content: "Chạm để xem bản đồ";
+    position: absolute;
+    left: 50%;
+    bottom: 14px;
+    z-index: 2;
+    transform: translateX(-50%);
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .94);
+    color: var(--green-dark);
+    font-size: 12.5px;
+    font-weight: 600;
+    white-space: nowrap;
+    box-shadow: 0 8px 18px -6px rgba(20, 60, 35, .4);
+    pointer-events: none;
+}
+:root[data-theme="dark"] .location-map.is-locked::before {
+    background: rgba(24, 36, 32, .94);
+    color: #7fcf9b;
 }

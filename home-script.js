@@ -768,3 +768,14 @@ if (backToTop) {
     update();
     setInterval(update, 60000);
 })();
+
+/* Trên điện thoại: khóa bản đồ cho đến khi chạm vào, để vuốt cuộn trang không bị bản đồ chặn */
+(function () {
+    var map = document.querySelector(".location-map");
+    if (!map || !window.matchMedia || !window.matchMedia("(hover: none) and (pointer: coarse)").matches) return;
+    map.classList.add("is-locked");
+    map.addEventListener("click", function () { map.classList.remove("is-locked"); });
+    document.addEventListener("touchstart", function (e) {
+        if (!map.contains(e.target)) map.classList.add("is-locked");
+    }, { passive: true });
+})();
