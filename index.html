@@ -147,28 +147,64 @@
             <div class="location-container">
 
                 <div class="location-info">
-                    <span class="location-label">📍 VỊ TRÍ NHÀ THUỐC</span>
+                    <span class="location-label">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                        VỊ TRÍ NHÀ THUỐC
+                    </span>
 
                     <h2>Nhà Thuốc An Đức 6</h2>
 
-                    <p>
-                        112B, Đường số 9, Phường Linh Xuân, TP.HCM
-                    </p>
-
-                    <p>
-                        Mở cửa: 06:00 – 22:00 hằng ngày
-                    </p>
+                    <ul class="location-list">
+                        <li>
+                            <span class="location-ico">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M3 10.5 12 3l9 7.5" />
+                                    <path d="M5 9.5V20h14V9.5" />
+                                    <path d="M10 20v-6h4v6" />
+                                </svg>
+                            </span>
+                            <div>
+                                <small>Địa chỉ</small>
+                                <strong>112B, Đường số 9, Phường Linh Xuân, TP.HCM</strong>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="location-ico">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <circle cx="12" cy="12" r="9" />
+                                    <path d="M12 7v5l3 2" />
+                                </svg>
+                            </span>
+                            <div>
+                                <small>Giờ mở cửa</small>
+                                <strong>06:00 – 22:00 hằng ngày <em class="location-status"
+                                        id="locationStatus"></em></strong>
+                            </div>
+                        </li>
+                    </ul>
 
                     <a href="https://www.google.com/maps/search/?api=1&query=Nh%C3%A0+Thu%E1%BB%91c+An+%C4%90%E1%BB%A9c+6"
                         target="_blank" rel="noopener noreferrer" class="location-button">
                         Xem chỉ đường trên Google Maps
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M5 12h14" />
+                            <path d="m13 6 6 6-6 6" />
+                        </svg>
                     </a>
                 </div>
 
                 <div class="location-map">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62693.34917812461!2d106.72794955599514!3d10.862156287239939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175278e27814ecb%3A0x5379a05b76ce427!2zTmjDoCBUaHXhu5FjIEFuIMSQ4bupYyA2!5e0!3m2!1svi!2s!4v1790821895393!5m2!1svi!2s"
-                        loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin">
+                        loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"
+                        title="Bản đồ Nhà Thuốc An Đức 6">
                     </iframe>
                 </div>
 
@@ -181,16 +217,145 @@
         <section class="intro-section" id="gioi-thieu">
             <div class="container">
 
-                <div class="section-heading">
-                    <span class="eyebrow">NHÀ THUỐC AN ĐỨC 6</span>
-                    <h2>
-                        Đồng hành cùng bạn<br>
-                        trên hành trình chăm sóc sức khỏe.
-                    </h2>
-                    <p>
-                        Cung cấp thông tin sản phẩm, kiến thức và những nội dung hữu ích để bạn chủ động chăm sóc bản
-                        thân và gia đình.
-                    </p>
+                <div class="intro-hero">
+                    <div class="section-heading">
+                        <span class="eyebrow">NHÀ THUỐC AN ĐỨC 6</span>
+                        <h2>
+                            Đồng hành cùng bạn<br>
+                            trên hành trình chăm sóc sức khỏe.
+                        </h2>
+                        <p>
+                            Cung cấp thông tin sản phẩm, kiến thức và những nội dung hữu ích để bạn chủ động chăm sóc
+                            bản
+                            thân và gia đình.
+                        </p>
+                    </div>
+
+                    <div class="hero-viz" aria-hidden="true">
+                        <svg viewBox="0 0 876 748" xmlns="http://www.w3.org/2000/svg" focusable="false">
+                            <defs>
+                                <pattern id="hvDots" width="14.4" height="14.4" patternUnits="userSpaceOnUse">
+                                    <circle cx="2" cy="2" r="1.5" fill="var(--v-grid)" />
+                                </pattern>
+                                <pattern id="hvDotsHi" width="14.4" height="14.4" patternUnits="userSpaceOnUse">
+                                    <circle cx="2" cy="2" r="2" fill="var(--v-grid-hi)" />
+                                </pattern>
+                                <linearGradient id="hvSweep" x1="0" x2="1" y1="0" y2="0">
+                                    <stop offset="0" stop-color="#fff" stop-opacity="0" />
+                                    <stop offset=".5" stop-color="#fff" stop-opacity="1" />
+                                    <stop offset="1" stop-color="#fff" stop-opacity="0" />
+                                </linearGradient>
+                                <mask id="hvMask" maskUnits="userSpaceOnUse" x="372" y="212" width="432" height="360">
+                                    <rect class="sweep" x="372" y="212" width="160" height="360" fill="url(#hvSweep)" />
+                                </mask>
+                                <linearGradient id="hvTail" gradientUnits="userSpaceOnUse" x1="125" y1="590" x2="192"
+                                    y2="537">
+                                    <stop offset="0" stop-color="var(--v-line)" stop-opacity="0" />
+                                    <stop offset="1" stop-color="var(--v-line)" stop-opacity=".9" />
+                                </linearGradient>
+                            </defs>
+
+                            <!-- lưới chấm -->
+                            <rect x="372" y="212" width="432" height="360" fill="url(#hvDots)" opacity=".7" />
+                            <rect x="372" y="212" width="432" height="360" fill="url(#hvDotsHi)" mask="url(#hvMask)" />
+
+                            <!-- biểu đồ hộp -->
+                            <g class="box b1" fill="none" stroke="var(--v-line)" stroke-width="2.5">
+                                <path d="M75 197H147M111 197V215M111 245V250M75 250H147" />
+                                <rect x="75" y="215" width="72" height="30" fill="var(--v4)" />
+                                <path d="M75 230H147" />
+                            </g>
+                            <g class="box b2" fill="none" stroke="var(--v-line)" stroke-width="2.5">
+                                <path d="M158 241H230M194 241V270M194 314V347M158 347H230" />
+                                <rect x="158" y="270" width="72" height="44" fill="var(--v3)" />
+                                <path d="M158 302H230" />
+                            </g>
+                            <g class="box b3" fill="none" stroke="var(--v-line)" stroke-width="2.5">
+                                <path d="M243 207H315M279 207V223M279 296V302M243 302H315" />
+                                <rect x="243" y="223" width="72" height="73" fill="var(--v2)" />
+                                <path d="M243 253H315" />
+                            </g>
+
+                            <!-- biểu đồ tròn -->
+                            <g class="pie" stroke="var(--cream)" stroke-width="3" stroke-linejoin="round">
+                                <path class="pie-slice" style="--dx:8.5px;--dy:-7.0px;--i:0" fill="var(--v1)"
+                                    d="M511 219 L511.0 129.0 A90 90 0 0 1 599.4 235.9Z" />
+                                <path class="pie-slice" style="--dx:9.6px;--dy:5.3px;--i:1" fill="var(--v3)"
+                                    d="M511 219 L599.4 235.9 A90 90 0 0 1 572.6 284.6Z" />
+                                <path class="pie-slice" style="--dx:3.4px;--dy:10.5px;--i:2" fill="var(--v4)"
+                                    d="M511 219 L572.6 284.6 A90 90 0 0 1 499.7 308.3Z" />
+                                <path class="pie-slice" style="--dx:-5.6px;--dy:9.5px;--i:3" fill="var(--v6)"
+                                    d="M511 219 L499.7 308.3 A90 90 0 0 1 438.2 271.9Z" />
+                                <path class="pie-slice" style="--dx:-10.6px;--dy:3.1px;--i:4" fill="var(--v5)"
+                                    d="M511 219 L438.2 271.9 A90 90 0 0 1 421.2 213.3Z" />
+                                <path class="pie-slice" style="--dx:-10.3px;--dy:-3.7px;--i:5" fill="var(--v2)"
+                                    d="M511 219 L421.2 213.3 A90 90 0 0 1 438.2 166.1Z" />
+                                <path class="pie-slice" style="--dx:-8.0px;--dy:-7.5px;--i:6" fill="var(--v7)"
+                                    d="M511 219 L438.2 166.1 A90 90 0 0 1 453.6 149.7Z" />
+                                <path class="pie-slice" style="--dx:-3.7px;--dy:-10.3px;--i:7" fill="var(--v8)"
+                                    d="M511 219 L453.6 149.7 A90 90 0 0 1 511.0 129.0Z" />
+                            </g>
+
+                            <!-- đường xu hướng -->
+                            <g class="trend">
+                                <path d="M125 590L192 537" stroke="url(#hvTail)" stroke-width="2.5" fill="none" />
+                                <path class="trend-line" pathLength="100" d="M192 537L259 553L447 399L595 396L650 341"
+                                    fill="none" stroke="var(--v-line)" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <circle class="node n0" cx="192" cy="537" r="8" />
+                                <circle class="node n1" cx="259" cy="553" r="8" />
+                                <circle class="node n2" cx="447" cy="399" r="8" />
+                                <circle class="node n3" cx="595" cy="396" r="8" />
+                            </g>
+
+                            <!-- biểu đồ phân tán -->
+                            <g class="scatter" fill="var(--v3)">
+                                <circle class="dot" cx="316" cy="565" r="2.6" style="--d:4.2s;--dl:-0.4s" />
+                                <circle class="dot" cx="407" cy="505" r="2.6" style="--d:3.2s;--dl:-0.3s" />
+                                <circle class="dot" cx="273" cy="609" r="2.6" style="--d:4.5s;--dl:-2.5s" />
+                                <circle class="dot" cx="373" cy="521" r="2.6" style="--d:4.5s;--dl:-0.2s" />
+                                <circle class="dot" cx="447" cy="459" r="2.6" style="--d:3.6s;--dl:-2.2s" />
+                                <circle class="dot" cx="398" cy="505" r="3" style="--d:3.1s;--dl:-2.2s" />
+                                <circle class="dot" cx="252" cy="586" r="4" style="--d:4.1s;--dl:-1.9s" />
+                                <circle class="dot" cx="465" cy="453" r="3" style="--d:3.9s;--dl:-1.0s" />
+                                <circle class="dot" cx="390" cy="535" r="4" style="--d:2.9s;--dl:-3.9s" />
+                                <circle class="dot" cx="279" cy="602" r="3" style="--d:4.4s;--dl:-1.7s" />
+                                <circle class="dot" cx="462" cy="461" r="3.4" style="--d:3.0s;--dl:-1.4s" />
+                                <circle class="dot" cx="383" cy="512" r="2.6" style="--d:4.5s;--dl:-1.9s" />
+                                <circle class="dot" cx="392" cy="514" r="4" style="--d:2.9s;--dl:-1.5s" />
+                                <circle class="dot" cx="392" cy="502" r="3" style="--d:3.7s;--dl:-2.0s" />
+                                <circle class="dot" cx="297" cy="585" r="4" style="--d:3.1s;--dl:-3.5s" />
+                                <circle class="dot" cx="272" cy="599" r="3" style="--d:4.2s;--dl:-3.5s" />
+                                <circle class="dot" cx="316" cy="559" r="4" style="--d:4.5s;--dl:-0.6s" />
+                                <circle class="dot" cx="285" cy="570" r="4" style="--d:4.2s;--dl:-0.7s" />
+                                <circle class="dot" cx="307" cy="566" r="3.4" style="--d:4.5s;--dl:-2.8s" />
+                                <circle class="dot" cx="380" cy="536" r="2.6" style="--d:3.3s;--dl:-3.5s" />
+                                <circle class="dot" cx="484" cy="462" r="4" style="--d:3.2s;--dl:-0.4s" />
+                                <circle class="dot" cx="385" cy="490" r="3" style="--d:3.3s;--dl:-0.4s" />
+                                <circle class="dot" cx="379" cy="518" r="2.6" style="--d:4.5s;--dl:-2.5s" />
+                                <circle class="dot" cx="260" cy="593" r="3.4" style="--d:4.5s;--dl:-2.4s" />
+                                <circle class="dot" cx="350" cy="534" r="4" style="--d:3.4s;--dl:-1.2s" />
+                                <circle class="dot" cx="299" cy="597" r="4" style="--d:4.2s;--dl:-0.6s" />
+                                <circle class="dot" cx="278" cy="607" r="3" style="--d:3.9s;--dl:-3.7s" />
+                                <circle class="dot" cx="424" cy="496" r="2.6" style="--d:3.9s;--dl:-1.0s" />
+                                <circle class="dot" cx="327" cy="563" r="3.4" style="--d:3.7s;--dl:-2.5s" />
+                                <circle class="dot" cx="449" cy="472" r="3" style="--d:4.2s;--dl:-3.0s" />
+                                <circle class="dot" cx="309" cy="567" r="2.6" style="--d:4.6s;--dl:-3.2s" />
+                                <circle class="dot" cx="353" cy="539" r="3.4" style="--d:3.3s;--dl:-3.7s" />
+                                <circle class="dot" cx="503" cy="448" r="3" style="--d:2.4s;--dl:-1.9s" />
+                                <circle class="dot" cx="333" cy="577" r="2.6" style="--d:3.4s;--dl:-2.6s" />
+                            </g>
+
+                            <!-- biểu đồ cột -->
+                            <g class="bars" fill="var(--v1)">
+                                <rect class="bar" style="--i:0" x="500" y="563" width="35" height="116" />
+                                <rect class="bar" style="--i:1" x="563" y="526" width="35" height="153" />
+                                <rect class="bar" style="--i:2" x="625" y="488" width="35" height="191" />
+                                <rect class="bar" style="--i:3" x="688" y="451" width="35" height="228" />
+                                <rect class="bar" style="--i:4" x="750" y="414" width="35" height="265" />
+                            </g>
+                        </svg>
+                    </div>
                 </div>
 
                 <!-- 4 MỤC TƯƠNG TÁC -->

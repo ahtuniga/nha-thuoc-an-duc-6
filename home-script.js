@@ -729,3 +729,42 @@ if (backToTop) {
         });
     });
 }   
+
+/* Tạm dừng mô hình chuyển động ở phần giới thiệu khi nằm ngoài màn hình (đỡ tốn pin/CPU) */
+(function () {
+    var viz = document.querySelector(".hero-viz");
+    if (!viz || !("IntersectionObserver" in window)) return;
+    new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+            viz.classList.toggle("is-offscreen", !e.isIntersecting);
+        });
+    }, { threshold: 0.05 }).observe(viz);
+})();
+
+/* Hiển thị "Đang mở cửa / Đã đóng cửa" theo giờ Việt Nam (mở 06:00 - 22:00) */
+(function () {
+    var el = document.getElementById("locationStatus");
+    if (!el) return;
+    function update() {
+        var h, m;
+        try {
+            var parts = new Intl.DateTimeFormat("en-GB", {
+                timeZone: "Asia/Ho_Chi_Minh", hour: "2-digit", minute: "2-digit", hour12: false
+            }).formatToParts(new Date());
+            parts.forEach(function (p) {
+                if (p.type === "hour") h = parseInt(p.value, 10) % 24;
+                if (p.type === "minute") m = parseInt(p.value, 10);
+            });
+        } catch (e) {
+            var d = new Date();
+            h = d.getHours();
+            m = d.getMinutes();
+        }
+        var mins = h * 60 + m;
+        var open = mins >= 6 * 60 && mins < 22 * 60;
+        el.textContent = open ? "Đang mở cửa" : "Đã đóng cửa";
+        el.classList.toggle("is-closed", !open);
+    }
+    update();
+    setInterval(update, 60000);
+})();
