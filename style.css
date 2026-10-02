@@ -3601,3 +3601,36 @@ body.article-viewer-open {
 :root[data-theme="dark"] .blog-card:hover .blog-content {
     background: #c7e2b9;
 }
+
+.blog-card.blog-hidden {
+    display: none;
+}
+
+.blog-more-btn {
+    display: block;
+    margin: 36px auto 0;
+    padding: 12px 30px;
+    border: 1px solid #1a4d2e;
+    border-radius: 999px;
+    background: transparent;
+    color: #1a4d2e;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.blog-more-btn:hover {
+    background: #1a4d2e;
+    color: #fff;
+}
+
+:root[data-theme="dark"] .blog-more-btn {
+    color: #cfe8d5;
+    border-color: rgba(207, 232, 213, 0.5);
+}
+
+:root[data-theme="dark"] .blog-more-btn:hover {
+    background: rgba(207, 232, 213, 0.15);
+}
