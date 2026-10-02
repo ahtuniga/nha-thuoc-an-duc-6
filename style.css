@@ -2271,6 +2271,14 @@ button {
     cursor: pointer;
 }
 
+.link-group a svg {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
 /* RESPONSIVE */
 @media (max-width: 1024px) {
     .footer-top {
@@ -4125,3 +4133,4 @@ body.article-viewer-open {
 .bento-card-image img {
     object-position: 170% center !important;
 }
+
