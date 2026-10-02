@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const card = document.createElement("a");
 
-        card.href = "#";
+        card.href = (window.PRODUCT_URLS && window.PRODUCT_URLS[product.id]) || "#";
         card.className = "product-card";
         card.dataset.productId = product.id;
 
@@ -499,6 +499,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (!card) return;
 
+
+            // Có trang riêng thì để trình duyệt chuyển trang bình thường
+            if (card.getAttribute("href") && card.getAttribute("href") !== "#") return;
 
             event.preventDefault();
 

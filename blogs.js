@@ -2266,7 +2266,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
                 <h3 class="blog-title">
-                    ${blog.title}
+                    ${(window.BLOG_URLS && window.BLOG_URLS[blog.id])
+                        ? '<a href="' + window.BLOG_URLS[blog.id] + '" style="color:inherit;text-decoration:none">' + blog.title + '</a>'
+                        : blog.title}
                 </h3>
 
 
@@ -2501,6 +2503,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
+
+            // Có trang riêng thì chuyển trang; không có thì mở cửa sổ đọc như cũ
+            if (window.BLOG_URLS && window.BLOG_URLS[blog.id]) {
+                window.location.href = window.BLOG_URLS[blog.id];
+                return;
+            }
 
             openBlog(blog);
 

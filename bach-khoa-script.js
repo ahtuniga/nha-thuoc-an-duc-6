@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
    ===================================================== */
 function createProductCard(product) {
     const card = document.createElement("a");
-    card.href = "#";
+    card.href = (window.PRODUCT_URLS && window.PRODUCT_URLS[product.id]) || "#";
     card.className = "product-card"; 
     card.dataset.productId = product.id;
     card.setAttribute("aria-label", `Xem thông tin ${product.name}`);
@@ -312,6 +312,8 @@ function createProductCard(product) {
         productGrid.addEventListener("click", (event) => {
             const card = event.target.closest(".product-card");
             if (!card) return;
+            // Có trang riêng thì để trình duyệt chuyển trang bình thường
+            if (card.getAttribute("href") && card.getAttribute("href") !== "#") return;
             event.preventDefault();
 
             const productId = card.dataset.productId;

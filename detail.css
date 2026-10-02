@@ -1,0 +1,193 @@
+/* =========================================================
+   DETAIL.CSS — giao diện cho trang sản phẩm (san-pham/) và
+   bài viết (kien-thuc/) do build.js sinh ra.
+   Dùng các biến màu của style.css nên tự đổi theo dark mode.
+   ========================================================= */
+.detail-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 130px 0 80px;
+    color: var(--text);
+    line-height: 1.75;
+}
+.article-page { max-width: 760px; }
+
+.crumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    font-size: .88rem;
+    color: var(--text-light);
+    margin-bottom: 24px;
+}
+.crumbs a { color: var(--green); text-decoration: none; }
+.crumbs a:hover { text-decoration: underline; }
+.crumbs [aria-current] {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.crumb-sep { opacity: .5; }
+
+.detail-tag {
+    display: inline-block;
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 10px;
+}
+.detail-page h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(1.6rem, 3.4vw, 2.3rem);
+    line-height: 1.25;
+    margin: 0 0 16px;
+}
+.detail-page h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 1.35rem;
+    margin: 0 0 10px;
+}
+
+/* ----- Sản phẩm ----- */
+.detail-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 380px) 1fr;
+    gap: 40px;
+    align-items: start;
+    margin-bottom: 36px;
+}
+.detail-image {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    padding: 20px;
+}
+.detail-image img { display: block; width: 100%; height: auto; border-radius: 12px; }
+.detail-back {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: .92rem;
+    font-weight: 600;
+    color: var(--green);
+    text-decoration: none;
+}
+.detail-back:hover { text-decoration: underline; }
+
+.detail-block {
+    border-top: 1px solid var(--line);
+    padding: 24px 0;
+}
+.detail-block p, .detail-block li { color: var(--text-light); font-size: 1.02rem; }
+.detail-block > :first-child { margin-top: 0; }
+.detail-desc h2 { margin-top: 0; }
+
+.detail-note {
+    border: 1px solid var(--line);
+    background: var(--white);
+    border-radius: 16px;
+    padding: 16px 20px;
+    font-size: .95rem;
+    color: var(--text-light);
+    margin: 8px 0 0;
+}
+
+/* ----- Bài viết ----- */
+.article-page .detail-tag { margin-bottom: 8px; }
+.blog-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 20px;
+    font-size: .88rem;
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+.article-cover img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 28px;
+}
+.article-body p, .article-body li { color: var(--text-light); font-size: 1.05rem; }
+.article-body h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 1.3rem;
+    margin: 34px 0 8px;
+    color: var(--text);
+}
+.article-body ul, .article-body ol { padding-left: 22px; }
+.article-body a { color: var(--green); }
+.article-body img { max-width: 100%; height: auto; }
+
+.blog-table-wrap, .article-body .table-wrap { overflow-x: auto; margin: 18px 0; }
+.article-body table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .95rem;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+}
+.article-body th, .article-body td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--line); }
+.article-body th { background: var(--green-soft); color: var(--text); font-weight: 700; }
+.article-body td:first-child { font-weight: 600; color: var(--text); }
+.article-body tbody tr:last-child td { border-bottom: 0; }
+
+.blog-sources {
+    border-top: 1px solid var(--line);
+    margin-top: 36px;
+    padding-top: 20px;
+}
+.blog-sources ol { padding-left: 20px; }
+.blog-sources li { font-size: .88rem; color: var(--text-light); margin-bottom: 6px; }
+.blog-disclaimer {
+    margin-top: 24px;
+    padding: 14px 18px;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    background: var(--white);
+    font-size: .9rem;
+    color: var(--text-light);
+}
+
+/* ----- Gợi ý liên quan ----- */
+.related { border-top: 1px solid var(--line); margin-top: 44px; padding-top: 28px; }
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 16px;
+}
+.related-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    color: var(--text);
+    text-decoration: none;
+    font-size: .92rem;
+    font-weight: 600;
+    line-height: 1.4;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+.related-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.related-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+@media (max-width: 760px) {
+    .detail-page { padding-top: 110px; }
+    .detail-hero { grid-template-columns: 1fr; gap: 22px; }
+    .detail-image { max-width: 420px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .related-card { transition: none; }
+}

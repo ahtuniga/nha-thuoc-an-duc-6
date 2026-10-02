@@ -1,24 +1,186 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
     <loc>https://YOUR-DOMAIN.vn/</loc>
   </url>
-
   <url>
     <loc>https://YOUR-DOMAIN.vn/bach_khoa.html</loc>
   </url>
-
   <url>
     <loc>https://YOUR-DOMAIN.vn/gioi_thieu.html</loc>
   </url>
-
   <url>
     <loc>https://YOUR-DOMAIN.vn/lien_he.html</loc>
   </url>
-
   <url>
     <loc>https://YOUR-DOMAIN.vn/chinh_sach_bao_mat.html</loc>
   </url>
-
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/may-do-huyet-ap-dien-tu-bap-tay-microlife-bp-b1-afib.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/may-do-nong-do-oxy-trong-mau-microlife-oxy-200.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/may-do-duong-huyet-aria-glucometer-bsi-diagnostics.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/3b-lysine-linh-chi.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/go-gout.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/gavita-dha-5mg.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/mediusa-glutathione-gold.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/mediusa-vitamin-c-1000mg-with-zinc.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/mediusa-premium-omega-3-gold.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/mon-solein-evening-primrose-oil-950mg-agk.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/haecho-k2-agk.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/foie-sain-agk.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/coenzym-q10-rex-agk.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/haecho-cal-agk.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/feron-uk-agk.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/kem-duong-am-da-oatrum-nhan-hung.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/duong-the-oatrum-body-lotion-vitamin-b3-chiet-xuat-dau-tam-nhan.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/bot-tam-tre-em-nhan-hung-nguon-goc-thao-duoc.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/oatrum-kids-nhan-hung.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/gel-tam-goi-toan-than-oatrum-baby-shower-nhan-hung.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/gel-cham-soc-da-cz-scarsoft-lacos.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/hydrogel-boi-bong-cz.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/gel-cham-soc-da-cz-scarsoft-lacos-2.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/tra-tui-loc-tra-oi-heratea-moc-tam.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/bot-nghe-nam-dong-trung-moc-tam.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/tra-ngu-hac-moc-tam.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/dung-dich-ve-sinh-phu-nu-santis-lady-tatra-pharmaceuticals.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/bach-duong-khang-diacarebest-diophaco.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/tra-ca-gai-leo-rau-ma-moc-tam.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/tra-day-thia-canh-moc-tam.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/vitamin-e-rosy-agk-400iu.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/collagen-rosy-agk.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/glumin-rex-agk.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/hoat-huyet-tien-dinh-sunmax-sunuri-30-vien-nang-mem.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/bo-may-do-huyet-ap-bap-tay-tu-dong-omron-ez-lite-hem-7180.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/hebee-hota-120ml.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/hedagu-with-ayuric-30-vien.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/kokoro-mama-30-vien.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/fertimax-for-women.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/fertimax-for-men.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/contip-kids.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/vikoprogast.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/kim-tien-thao.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/curmin-nano-posy.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/dung-dich-tam-goi-kho-lacos-500ml-dr-max-comfocare.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/xit-mui-somixoan-15ml.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/aci-joint-min-30-vien.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/kangi-lucan-650.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/hero-kid-sanofa.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/san-pham/on-dinh-duong-huyet-mediusa-blood-sugar-support-hop-30-vien.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/kien-thuc/cholesterol-hieu-dung-ve-mo-mau-va-cach-kiem-soat-ldl.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/kien-thuc/dau-da-day-trao-nguoc-phan-biet-trieu-chung-thuong-gap-va-dau-hieu-canh-bao.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/kien-thuc/vitamin-c-cach-dung-phu-hop-va-nhung-luu-y.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/kien-thuc/duong-huyet-cac-chi-so-can-biet-va-cach-tu-theo-doi-bang-may-aria.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/kien-thuc/canxi-vitamin-d3-va-k2-dung-the-nao-cho-dung.html</loc>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.vn/kien-thuc/collagen-bang-chung-khoa-hoc-noi-gi.html</loc>
+  </url>
 </urlset>
