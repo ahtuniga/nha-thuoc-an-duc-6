@@ -130,6 +130,7 @@ ${body}
 ${FOOTER}
     <script src="../trang-tinh.js"></script>
     <script src="../theme.js"></script>
+    <script src="../gio-hang.js"></script>
 </body>
 </html>
 `;
@@ -183,6 +184,7 @@ ${related.map((r) => `                <a class="related-card" href="../${pPath(r
                     <div class="detail-head">
                         <span class="detail-tag">${esc(cat)}</span>
                         <h1>${esc(p.name)}</h1>
+                        <button type="button" class="agh-add agh-add--detail" data-add-to-cart="${esc(p.id)}" data-name="${esc(shortName)}" data-image="${esc(p.image)}" data-url="${esc(pPath(p))}">+ Thêm vào danh sách báo giá</button>
                         <a class="detail-back" href="../index.html#san-pham">← Tất cả sản phẩm</a>
                     </div>
                 </div>

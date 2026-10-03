@@ -232,6 +232,17 @@ document.addEventListener("DOMContentLoaded", () => {
         card.appendChild(imageBox);
         card.appendChild(footer);
 
+        /* Nút thêm vào danh sách báo giá (xử lý bởi gio-hang.js) */
+        const addBtn = document.createElement("button");
+        addBtn.type = "button";
+        addBtn.className = "agh-add agh-add--card";
+        addBtn.textContent = "+ Thêm vào danh sách báo giá";
+        addBtn.dataset.addToCart = product.id;
+        addBtn.dataset.name = product.name.split(/\s[–—-]\s/)[0];
+        addBtn.dataset.image = product.image;
+        addBtn.dataset.url = (window.PRODUCT_URLS && window.PRODUCT_URLS[product.id]) || "";
+        card.appendChild(addBtn);
+
 
         return card;
     }
