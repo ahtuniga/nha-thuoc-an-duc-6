@@ -481,7 +481,7 @@ button {
    ========================================================= */
 .health-showcase-section {
     position: relative;
-    padding: 34px 18px 82px;
+    padding: 34px 18px 30px;
     overflow: hidden;
     background: var(--cream);
 }
@@ -1028,7 +1028,7 @@ button {
    ========================================================= */
 .products-section {
     padding: 60px 0; /* Giảm khoảng cách trên và dưới xuống còn 60px */
-    background: #173820; 
+    background: #4f765d; 
     color: #ffffff;
 }
 
@@ -5035,4 +5035,1055 @@ body.article-viewer-open {
   .site-footer .footer-link-grid { grid-template-columns: 1fr !important; }
   .site-footer .link-group:last-child { grid-column: auto; }
   .site-footer .footer-bottom-right { flex-wrap: wrap; }
+}
+
+/* =========================================================
+   AN ĐỨC 6 — FINAL HOMEPAGE UI PASS
+   Mục tiêu: bám sát mockup đã duyệt, chỉ thay đổi presentation.
+   Không thay đổi product data, search logic, cart logic hay modal logic.
+   ========================================================= */
+
+/* ---------- HEADER ---------- */
+.site-header {
+    padding: 0;
+    background: #6f9278;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 18px rgba(45, 78, 55, 0.10);
+}
+.site-header.scrolled {
+    padding: 0;
+    background: rgba(111, 146, 120, 0.97);
+    box-shadow: 0 8px 24px rgba(45, 78, 55, 0.12);
+}
+.header-inner,
+.site-header:not(.scrolled) .header-inner {
+    width: min(1360px, calc(100% - 56px));
+    min-height: 60px;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
+.logo {
+    color: #ffffff;
+}
+
+.logo-main {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -1.3px;
+}
+.logo-dot { background: #dbe4c2; width: 8px; height: 8px; }
+.main-nav { gap: clamp(20px, 2.4vw, 34px); }
+.nav-link {
+    color: #f7faf5;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 22px 0 19px;
+    white-space: nowrap;
+}
+.nav-link span {
+    margin-left: 4px;
+    font-size: 12px;
+    opacity: .8;
+}
+.nav-link::after {
+    background: #dbe4c2;
+    height: 2px;
+    bottom: 11px;
+}
+.nav-link:hover,
+.nav-link.active {
+    color: #ffffff;
+}
+.theme-toggle {
+    color: #fff;
+    border-color: rgba(255,255,255,.28);
+    background: rgba(255,255,255,.05);
+}
+.agh-hgroup { margin-left: 0 !important; }
+.agh-hbtn {
+    border-color: rgba(255,255,255,.42) !important;
+    color: #ffffff !important;
+    background: rgba(255,255,255,.08) !important;
+}
+
+.agh-hbtn:hover {
+    background: rgba(255,255,255,.16) !important;
+}
+.agh-hbtn:hover { background: rgba(255,255,255,.08) !important; }
+.agh-badge { background: #dbe4c2 !important; color: #173820 !important; }
+
+/* ---------- PRODUCT LOOKUP ---------- */
+.products-section {
+    position: relative;
+    overflow: hidden;
+    padding: 112px 0 72px;
+    background: #173820;
+    color: #fff;
+}
+.products-section::before,
+.products-section::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    opacity: .8;
+}
+.products-section::before {
+    width: 250px;
+    height: 330px;
+    left: -170px;
+    bottom: -90px;
+    border: 1px solid rgba(183,223,170,.18);
+    border-radius: 50% 50% 0 50%;
+    transform: rotate(-28deg);
+}
+.products-section::after {
+    width: 150px;
+    height: 210px;
+    right: -50px;
+    top: 28px;
+    border: 1px solid rgba(183,223,170,.14);
+    border-radius: 70% 30% 70% 30%;
+    transform: rotate(25deg);
+}
+.products-section .container {
+    position: relative;
+    z-index: 1;
+    width: min(1360px, calc(100% - 56px));
+}
+.products-header-row {
+    grid-template-columns: minmax(0, 1.05fr) minmax(360px, .95fr);
+    gap: 64px;
+    align-items: end;
+    margin-bottom: 34px;
+}
+.products-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    color: #dbe4c2;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+.products-eyebrow span {
+    width: 42px;
+    height: 1px;
+    background: rgba(219,228,194,.8);
+}
+.products-title h2 {
+    margin: 0;
+    font-size: clamp(42px, 5vw, 58px);
+    line-height: 1.04;
+    letter-spacing: -2.5px;
+    font-weight: 500;
+}
+.products-title h2 em {
+    color: #b7dfaa;
+    font-style: normal;
+}
+.products-actions {
+    position: relative;
+    padding-left: 38px;
+    border-left: 1px solid rgba(219,228,194,.24);
+}
+.products-actions p {
+    max-width: 430px;
+    margin: 0 0 20px;
+    color: rgba(255,255,255,.82);
+    font-size: 14px;
+    line-height: 1.55;
+}
+.dark-search-box {
+    max-width: 100%;
+}
+.dark-search-box input {
+    box-sizing: border-box;
+    padding: 13px 48px 13px 18px;
+    background: rgba(255,255,255,.055);
+    border: 1px solid rgba(255,255,255,.24);
+    border-radius: 999px;
+    font-size: 14px;
+}
+.dark-search-box input:focus { border-color: rgba(219,228,194,.72); }
+.dark-search-box input::placeholder { color: rgba(255,255,255,.48); }
+.dark-search-box .search-icon {
+    right: 18px;
+    color: #fff;
+    font-size: 22px;
+    line-height: 1;
+}
+
+/* ---------- CARDS ---------- */
+.product-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    align-items: stretch;
+}
+.product-card {
+    position: relative;
+    min-width: 0;
+    min-height: 470px;
+    box-sizing: border-box;
+    padding: 17px 17px 18px;
+    align-items: stretch;
+    background: #f3f6ec;
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 18px;
+    box-shadow: 0 16px 34px rgba(0,0,0,.12);
+    color: #173820;
+    overflow: hidden;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 22px 42px rgba(0,0,0,.18);
+}
+.card-title-elegant {
+    order: 2;
+    flex: 0 0 70px;
+    min-height: 70px;
+    max-height: 70px;
+    margin: 0 0 10px;
+    color: #173820;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
+}
+.card-title-elegant::after {
+    content: "";
+    display: block;
+    width: 42px;
+    height: 1px;
+    margin-top: 8px;
+    background: #2c7046;
+}
+.product-image-box {
+    order: 1;
+    position: relative;
+    flex: 0 0 auto;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    height: auto;
+    margin: 0 0 14px;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid rgba(23,56,32,.08);
+    border-radius: 15px;
+}
+.product-image-box img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    mix-blend-mode: normal;
+    transition: transform .4s ease;
+}
+.product-card:hover .product-image-box img { transform: scale(1.025); }
+.product-image-box .card-badge {
+    top: 9px;
+    left: 9px;
+    padding: 5px 10px;
+    background: #dbe4c2;
+    color: #173820;
+    font-size: 10px;
+    box-shadow: 0 3px 8px rgba(23,56,32,.08);
+}
+.card-footer {
+    order: 3;
+    margin-top: auto;
+    align-items: stretch;
+}
+.shop-btn-white {
+    max-width: none;
+    margin-bottom: 9px;
+    padding: 12px 16px;
+    background: #0f5b37;
+    color: #fff;
+    border-radius: 999px;
+    font-size: 13px;
+}
+.product-card:hover .shop-btn-white {
+    background: #173820;
+    color: #fff;
+}
+.price-text-subtle {
+    align-self: flex-start;
+    color: #7d8f82;
+    font-size: 11px;
+}
+.agh-add--card { display: none !important; }
+.load-more-container { margin-top: 28px; }
+.products-section .shop-btn:not(.highlight-btn) {
+    color: #fff;
+    border-color: rgba(255,255,255,.48);
+}
+.products-section .shop-btn.highlight-btn {
+    background: #dbe4c2;
+    border-color: #dbe4c2;
+    color: #173820;
+}
+.products-section .shop-btn.highlight-btn:hover {
+    background: #fff;
+    border-color: #fff;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1100px) {
+    .main-nav { gap: 18px; }
+    .nav-link { font-size: 12px; }
+    .product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 850px) {
+    .header-inner { width: calc(100% - 32px); }
+    .main-nav { gap: 14px; }
+    .products-header-row { grid-template-columns: 1fr; gap: 28px; }
+    .products-actions { padding-left: 0; padding-top: 24px; border-left: 0; border-top: 1px solid rgba(219,228,194,.22); }
+    .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 700px) {
+    .site-header { padding: 0; }
+    .header-inner,
+    .site-header:not(.scrolled) .header-inner { min-height: 58px; width: calc(100% - 28px); }
+    .main-nav { top: 64px; }
+    .products-section { padding: 88px 0 56px; }
+    .products-section .container { width: calc(100% - 28px); }
+    .products-title h2 { font-size: 42px; letter-spacing: -1.8px; }
+    .product-grid { grid-template-columns: 1fr; gap: 16px; }
+    .product-card { min-height: 0; }
+    .product-image-box { aspect-ratio: 4 / 3; }
+    .card-title-elegant { min-height: 66px; max-height: 66px; flex-basis: 66px; }
+}
+
+/* =========================================================
+   AN ĐỨC 6 — APPROVED PRODUCT CARD REFINEMENT
+   Giữ nguyên logic/JS; chỉ tinh chỉnh bố cục và thẩm mỹ.
+   ========================================================= */
+.products-section {
+    padding: 94px 0 70px;
+}
+
+.products-section .container,
+.header-inner,
+.site-header:not(.scrolled) .header-inner {
+    width: min(1400px, calc(100% - 48px));
+}
+
+.products-header-row {
+    gap: 54px;
+    margin-bottom: 40px;
+}
+
+.products-actions {
+    padding-left: 34px;
+}
+
+.product-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 28px;
+    align-items: stretch;
+}
+
+.product-card {
+    min-height: 414px;
+    padding: 16px 16px 17px;
+    border-radius: 17px;
+    box-shadow: 0 12px 28px rgba(0,0,0,.105);
+}
+
+.product-image-box {
+    aspect-ratio: 5 / 4;
+    margin-bottom: 15px;
+    border-radius: 14px;
+    background: #fff;
+}
+
+.product-image-box img {
+    object-fit: contain;
+    padding: 0;
+}
+
+.card-title-elegant {
+    flex-basis: 76px;
+    min-height: 76px;
+    max-height: 76px;
+    margin-bottom: 7px;
+    font-size: 15.5px;
+    line-height: 1.42;
+}
+
+.card-title-elegant::after {
+    width: 34px;
+    margin-top: 7px;
+}
+
+.card-footer {
+    margin-top: auto;
+}
+
+/* Nút Khám phá: vẫn giữ nguyên chức năng/label, nhưng gọn và sang hơn. */
+.shop-btn-white {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: auto;
+    max-width: fit-content;
+    margin: 0 0 7px;
+    padding: 0;
+    background: transparent;
+    color: #236442;
+    border: 0;
+    border-radius: 0;
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: .05px;
+    line-height: 1.2;
+    box-shadow: none;
+}
+
+.shop-btn-white::before {
+    content: "→";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 21px;
+    height: 21px;
+    margin-right: 8px;
+    border: 1px solid rgba(35,100,66,.7);
+    border-radius: 50%;
+    font-size: 13px;
+    line-height: 1;
+    transition: transform .2s ease, background .2s ease, color .2s ease;
+}
+
+.product-card:hover .shop-btn-white {
+    background: transparent;
+    color: #173820;
+}
+
+.product-card:hover .shop-btn-white::before {
+    transform: translateX(2px);
+    background: #236442;
+    color: #fff;
+}
+
+.price-text-subtle {
+    display: block;
+    color: #819087;
+    font-size: 10.5px;
+    line-height: 1.35;
+}
+
+@media (max-width: 1100px) {
+    .product-grid {
+        gap: 24px;
+    }
+    .product-card {
+        min-height: 405px;
+    }
+}
+
+@media (max-width: 850px) {
+    .products-section .container,
+    .header-inner,
+    .site-header:not(.scrolled) .header-inner {
+        width: calc(100% - 32px);
+    }
+    .product-grid {
+        gap: 22px;
+    }
+}
+
+@media (max-width: 700px) {
+    .products-section {
+        padding: 84px 0 56px;
+    }
+    .products-section .container {
+        width: calc(100% - 28px);
+    }
+    .product-grid {
+        gap: 18px;
+    }
+    .product-card {
+        min-height: 0;
+        padding: 15px;
+    }
+    .product-image-box {
+        aspect-ratio: 5 / 4;
+    }
+    .card-title-elegant {
+        flex-basis: 70px;
+        min-height: 70px;
+        max-height: 70px;
+    }
+}
+
+
+/* =========================================================
+   AN ĐỨC 6 — MÔ HÌNH GIẢI PHẪU 3D / REFERENCE UI
+   Chỉ thay đổi visual layout. Hotspot + bach-khoa-script.js giữ nguyên.
+   ========================================================= */
+.anatomy-section{position:relative;padding:88px 0 104px!important;background:#f5f7f2!important;overflow:hidden;}
+.anatomy-section:before,.anatomy-section:after{content:"";position:absolute;width:220px;height:220px;border:1px solid rgba(31,91,55,.07);border-radius:50%;pointer-events:none;}
+.anatomy-section:before{left:-110px;top:110px}.anatomy-section:after{right:-110px;bottom:70px}
+.anatomy-container{width:min(1740px,calc(100% - 48px))!important;max-width:none!important;margin:0 auto!important}
+.anatomy-heading{max-width:1040px!important;margin:0 auto 36px!important;text-align:center!important}
+.anatomy-heading .eyebrow{display:inline-flex;align-items:center;gap:14px;margin-bottom:15px!important;color:#21603d!important;font-size:12px!important;font-weight:800!important;letter-spacing:2.8px!important}
+.anatomy-heading .eyebrow:before,.anatomy-heading .eyebrow:after{content:"";width:42px;height:1px;background:rgba(33,96,61,.38)}
+.anatomy-heading h2{margin:0 0 14px!important;color:#174f32!important;font-family:'Playfair Display',Georgia,serif!important;font-size:clamp(38px,4vw,60px)!important;line-height:1.08!important;letter-spacing:-1.7px!important}
+.anatomy-heading p{max-width:900px;margin:0 auto!important;color:#718076!important;font-size:16px!important;line-height:1.65!important}
+.anatomy-stage{position:relative;width:100%!important;padding:30px!important;border-radius:32px!important;background:linear-gradient(135deg,#dce9dd 0%,#b9cfbc 50%,#e0e9de 100%)!important;box-shadow:0 24px 68px rgba(32,75,46,.13)!important;overflow:hidden!important}
+.anatomy-content-wrapper{position:relative;z-index:2;display:grid!important;grid-template-columns:minmax(0,1.55fr) minmax(410px,.78fr)!important;gap:34px!important;align-items:stretch!important;width:100%!important;max-width:none!important;margin:0!important}
+.anatomy-visual-box{position:relative!important;min-width:0!important;width:100%!important;min-height:590px!important;padding:0!important;border:1px solid rgba(255,255,255,.8)!important;border-radius:26px!important;background:rgba(255,255,255,.22)!important;overflow:hidden!important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)!important;backdrop-filter:blur(8px)!important}
+.anatomy-main-img{position:relative!important;z-index:1!important;display:block!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;aspect-ratio:16/9!important;object-fit:contain!important;object-position:center!important;animation:none!important}
+.anatomy-hotspot{z-index:20!important}
+.anatomy-system-nav{position:absolute;z-index:30;left:24px;top:24px;bottom:24px;width:190px;padding:14px 10px;border:1px solid rgba(255,255,255,.72);border-radius:22px;background:rgba(248,252,246,.88);box-shadow:0 14px 35px rgba(33,73,45,.12);backdrop-filter:blur(12px);display:flex;flex-direction:column;justify-content:center;gap:7px;pointer-events:none}
+.anatomy-system-nav__item{display:flex;align-items:center;gap:11px;min-height:43px;padding:8px 12px;border-radius:15px;color:#567064;font-size:13px;font-weight:600;white-space:nowrap}
+.anatomy-system-nav__item.is-active{color:#205d3c;background:#dfeeda}
+.anatomy-system-nav__item .nav-icon{width:28px;height:28px;display:grid;place-items:center;border-radius:50%;font-size:15px;color:#477256;background:#edf5e9}
+.anatomy-system-nav__item.is-active .nav-icon{color:#fff;background:#5d946a}
+.anatomy-details-panel{min-width:0!important;min-height:590px!important;align-self:stretch!important;display:flex!important;flex-direction:column!important;justify-content:center!important;box-sizing:border-box!important;padding:48px 42px!important;border:1px solid rgba(255,255,255,.9)!important;border-radius:26px!important;background:rgba(250,252,247,.95)!important;box-shadow:0 17px 46px rgba(38,73,49,.10)!important;backdrop-filter:blur(12px)!important}
+.panel-top-bar{margin-bottom:24px!important}.panel-tag{padding:8px 14px!important;color:#24613f!important;background:#eaf2e5!important;font-size:11px!important;letter-spacing:1.35px!important}.panel-close-btn{width:34px!important;height:34px!important;background:#edf4e9!important}
+.panel-body h3{margin:0 0 18px!important;color:#185235!important;font-family:'Playfair Display',Georgia,serif!important;font-size:clamp(29px,2.35vw,40px)!important;line-height:1.16!important;letter-spacing:-.7px!important}
+.panel-body p{margin:0 0 24px!important;color:#708077!important;font-size:16px!important;line-height:1.75!important}
+.panel-suggestion{margin-top:auto!important;padding:15px 17px!important;border-left:3px solid #4f805d!important;border-radius:0 13px 13px 0!important;background:#eef4eb!important;color:#315f43!important}
+.anatomy-panel-features{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px;padding-top:20px;border-top:1px solid rgba(45,88,57,.10)}
+.anatomy-panel-features>div{display:grid;grid-template-columns:34px 1fr;column-gap:8px;align-items:center;min-width:0}.anatomy-panel-features span{grid-row:1/3;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:#4f7e5d;background:#e9f2e5;font-size:15px}.anatomy-panel-features strong{font-size:12px;color:#35654a}.anatomy-panel-features small{font-size:10px;color:#87958c;line-height:1.2}
+@media(max-width:1100px){.anatomy-container{width:min(100% - 36px,1100px)!important}.anatomy-stage{padding:24px!important}.anatomy-content-wrapper{grid-template-columns:minmax(0,1.2fr) minmax(330px,.8fr)!important;gap:24px!important}.anatomy-visual-box,.anatomy-details-panel{min-height:500px!important}.anatomy-system-nav{width:160px;left:18px;top:18px;bottom:18px}.anatomy-system-nav__item{font-size:12px}}
+@media(max-width:820px){.anatomy-section{padding:72px 0 80px!important}.anatomy-container{width:calc(100% - 28px)!important}.anatomy-heading{margin-bottom:30px!important}.anatomy-heading h2{font-size:clamp(32px,8vw,46px)!important}.anatomy-content-wrapper{grid-template-columns:1fr!important;gap:20px!important}.anatomy-visual-box{min-height:0!important;aspect-ratio:16/9!important}.anatomy-system-nav{left:12px;top:12px;bottom:12px;width:150px;padding:8px 7px}.anatomy-system-nav__item{min-height:35px;padding:5px 8px;font-size:11px}.anatomy-system-nav__item .nav-icon{width:24px;height:24px}.anatomy-details-panel{min-height:360px!important;padding:30px 24px!important}}
+@media(max-width:520px){.anatomy-section{padding:60px 0 68px!important}.anatomy-stage{padding:12px!important;border-radius:22px!important}.anatomy-visual-box,.anatomy-details-panel{border-radius:18px!important}.anatomy-system-nav{width:120px}.anatomy-system-nav__item{font-size:9px;gap:6px}.anatomy-system-nav__item .nav-icon{width:20px;height:20px;font-size:11px}.anatomy-details-panel{min-height:320px!important;padding:26px 20px!important}.panel-body h3{font-size:27px!important}.panel-body p{font-size:14px!important}.anatomy-panel-features{gap:7px}.anatomy-panel-features strong{font-size:10px}.anatomy-panel-features small{font-size:8px}}
+
+
+/* =========================================================
+   AN ĐỨC 6 — ANATOMY 3D BALANCED SCALE / FINAL PASS
+   Cân lại kích thước tổng thể theo layout tham khảo.
+   Không thay đổi hotspot hoặc JavaScript.
+   ========================================================= */
+.anatomy-section {
+    position: relative;
+    padding: 54px 0 96px !important;
+}
+
+.anatomy-container {
+    width: min(1840px, calc(100% - 56px)) !important;
+}
+
+.anatomy-heading {
+    max-width: 1120px !important;
+    margin-bottom: 50px !important;
+}
+
+.anatomy-heading h2 {
+    font-size: clamp(42px, 4.1vw, 64px) !important;
+    margin-bottom: 16px !important;
+}
+
+.anatomy-heading p {
+    max-width: 960px !important;
+    font-size: 17px !important;
+    line-height: 1.65 !important;
+}
+
+.anatomy-stage {
+    padding: 34px !important;
+    border-radius: 34px !important;
+}
+
+.anatomy-content-wrapper {
+    grid-template-columns: minmax(0, 1.5fr) minmax(420px, .82fr) !important;
+    gap: 32px !important;
+}
+
+.anatomy-visual-box,
+.anatomy-details-panel {
+    min-height: 620px !important;
+}
+
+.anatomy-visual-box {
+    border-radius: 28px !important;
+}
+
+.anatomy-details-panel {
+    padding: 50px 46px !important;
+    border-radius: 28px !important;
+}
+
+.panel-body h3 {
+    font-size: clamp(32px, 2.35vw, 42px) !important;
+    line-height: 1.16 !important;
+}
+
+.panel-body p {
+    font-size: 16px !important;
+    line-height: 1.78 !important;
+}
+
+@media (max-width: 1200px) {
+    .anatomy-container {
+        width: min(100% - 42px, 1160px) !important;
+    }
+    .anatomy-stage { padding: 28px !important; }
+    .anatomy-content-wrapper {
+        grid-template-columns: minmax(0, 1.28fr) minmax(350px, .82fr) !important;
+        gap: 26px !important;
+    }
+    .anatomy-visual-box,
+    .anatomy-details-panel { min-height: 540px !important; }
+}
+
+@media (max-width: 820px) {
+    .anatomy-section { padding: 76px 0 86px !important; }
+    .anatomy-container { width: calc(100% - 28px) !important; }
+    .anatomy-heading { margin-bottom: 32px !important; }
+    .anatomy-heading h2 { font-size: clamp(34px, 8vw, 48px) !important; }
+    .anatomy-stage { padding: 16px !important; border-radius: 24px !important; }
+    .anatomy-content-wrapper { grid-template-columns: 1fr !important; gap: 22px !important; }
+    .anatomy-visual-box { min-height: 0 !important; aspect-ratio: 16 / 9 !important; }
+    .anatomy-details-panel { min-height: 380px !important; padding: 32px 26px !important; }
+}
+
+@media (max-width: 520px) {
+    .anatomy-section { padding: 62px 0 72px !important; }
+    .anatomy-heading h2 { font-size: 32px !important; }
+    .anatomy-heading p { font-size: 14px !important; }
+    .anatomy-stage { padding: 12px !important; }
+    .anatomy-details-panel { min-height: 320px !important; padding: 26px 20px !important; }
+}
+
+/* =========================================================
+   AN ĐỨC 6 — ANATOMY COMPACT NAV + PANEL BALANCE
+   Giảm chiều cao menu hệ cơ quan và đồng bộ panel với vùng 3D.
+   ========================================================= */
+
+.anatomy-stage {
+    padding: 28px !important;
+}
+
+.anatomy-content-wrapper {
+    grid-template-columns: minmax(0, 1.52fr) minmax(390px, .78fr) !important;
+    gap: 28px !important;
+}
+
+.anatomy-visual-box,
+.anatomy-details-panel {
+    min-height: 560px !important;
+    height: 560px !important;
+}
+
+.anatomy-main-img {
+    height: 100% !important;
+}
+
+/* Menu hệ cơ quan: không còn kéo dài kín toàn bộ chiều cao ảnh. */
+.anatomy-system-nav {
+    top: 24px !important;
+    bottom: auto !important;
+    height: 348px !important;
+    box-sizing: border-box !important;
+    padding: 12px 10px !important;
+    justify-content: flex-start !important;
+    gap: 5px !important;
+    border-radius: 22px !important;
+}
+
+.anatomy-system-nav__item {
+    min-height: 43px !important;
+    flex: 0 0 43px !important;
+}
+
+.anatomy-details-panel {
+    padding: 40px 38px !important;
+}
+
+.panel-top-bar {
+    margin-bottom: 18px !important;
+}
+
+.panel-body h3 {
+    margin-bottom: 14px !important;
+}
+
+.panel-body p {
+    margin-bottom: 18px !important;
+    line-height: 1.65 !important;
+}
+
+.anatomy-panel-features {
+    margin-top: 18px !important;
+    padding-top: 16px !important;
+}
+
+@media (max-width: 1200px) {
+    .anatomy-stage {
+        padding: 24px !important;
+    }
+
+    .anatomy-content-wrapper {
+        grid-template-columns: minmax(0, 1.28fr) minmax(350px, .82fr) !important;
+        gap: 24px !important;
+    }
+
+    .anatomy-visual-box,
+    .anatomy-details-panel {
+        min-height: 520px !important;
+        height: 520px !important;
+    }
+
+    .anatomy-system-nav {
+        height: 320px !important;
+        top: 20px !important;
+    }
+}
+
+@media (max-width: 820px) {
+    .anatomy-stage {
+        padding: 16px !important;
+    }
+
+    .anatomy-content-wrapper {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .anatomy-visual-box {
+        height: auto !important;
+        min-height: 0 !important;
+        aspect-ratio: 16 / 9 !important;
+    }
+
+    .anatomy-details-panel {
+        height: auto !important;
+        min-height: 340px !important;
+    }
+
+    .anatomy-system-nav {
+        top: 14px !important;
+        height: 285px !important;
+    }
+}
+
+@media (max-width: 520px) {
+    .anatomy-system-nav {
+        top: 10px !important;
+        left: 10px !important;
+        height: 245px !important;
+        width: 120px !important;
+        padding: 7px !important;
+        gap: 2px !important;
+    }
+
+    .anatomy-system-nav__item {
+        min-height: 34px !important;
+        flex-basis: 34px !important;
+        padding: 5px 7px !important;
+    }
+
+    .anatomy-details-panel {
+        min-height: 310px !important;
+        padding: 24px 18px !important;
+    }
+}
+
+/* =========================================================
+   AN ĐỨC 6 — HEADER FINAL / SAGE LUXURY UI
+   Đặt ở CUỐI style.css để không bị CSS phía trên ghi đè
+   ========================================================= */
+
+.site-header {
+    position: fixed !important;
+    top: 18px !important;
+    left: 24px !important;
+    right: 24px !important;
+    width: auto !important;
+    height: 72px !important;
+
+    padding: 0 !important;
+    background: rgba(236, 245, 237, 0.96) !important;
+
+    border: 1px solid rgba(76, 125, 91, 0.14) !important;
+    border-radius: 22px !important;
+
+    box-shadow:
+        0 10px 30px rgba(52, 91, 63, 0.10),
+        0 2px 8px rgba(52, 91, 63, 0.05) !important;
+
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+
+    z-index: 9999 !important;
+}
+
+/* Header khi cuộn */
+.site-header.scrolled {
+    top: 12px !important;
+    background: rgba(232, 243, 233, 0.98) !important;
+
+    border-color: rgba(70, 119, 84, 0.16) !important;
+
+    box-shadow:
+        0 12px 32px rgba(52, 91, 63, 0.13) !important;
+}
+
+/* Khung bên trong */
+.site-header .header-inner,
+.site-header:not(.scrolled) .header-inner {
+    width: 100% !important;
+    max-width: none !important;
+    height: 72px !important;
+    min-height: 72px !important;
+
+    padding: 0 26px !important;
+    margin: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 22px !important;
+    box-shadow: none !important;
+}
+
+/* LOGO */
+.site-header .logo,
+.site-header .logo-main {
+    color: #185333 !important;
+}
+
+.site-header .logo-main {
+    font-size: 25px !important;
+    font-weight: 800 !important;
+    letter-spacing: -1.4px !important;
+}
+
+.site-header .logo-dot {
+    width: 8px !important;
+    height: 8px !important;
+    background: #3f8056 !important;
+}
+
+/* NAVIGATION */
+.site-header .main-nav {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    gap: 7px !important;
+    margin: 0 auto !important;
+}
+
+.site-header .nav-link {
+    position: relative !important;
+
+    padding: 12px 22px !important;
+
+    color: #315d42 !important;
+
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
+
+    border-radius: 999px !important;
+
+    transition:
+        background .22s ease,
+        color .22s ease,
+        transform .22s ease !important;
+}
+
+/* Bỏ mũi tên ở Sản phẩm + Kiến thức */
+.site-header .nav-link span {
+    display: none !important;
+}
+
+/* Không dùng gạch chân kiểu cũ */
+.site-header .nav-link::after {
+    display: none !important;
+}
+
+/* Hover */
+.site-header .nav-link:hover {
+    color: #175333 !important;
+    background: rgba(203, 225, 205, 0.65) !important;
+}
+
+/* Active */
+.site-header .nav-link.active {
+    color: #155331 !important;
+    background: #dcebdc !important;
+
+    box-shadow:
+        inset 0 0 0 1px rgba(63, 128, 86, 0.05) !important;
+}
+
+/* Gạch nhỏ dưới mục active */
+.site-header .nav-link.active::before {
+    content: "";
+    position: absolute;
+
+    left: 50%;
+    bottom: 5px;
+
+    width: 38px;
+    height: 3px;
+
+    border-radius: 999px;
+
+    background: #2f7750;
+
+    transform: translateX(-50%);
+}
+
+/* Nhóm icon bên phải */
+.site-header .agh-hgroup {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+
+    margin-left: 18px !important;
+}
+
+/* Cart + theme */
+.site-header .agh-hbtn,
+.site-header .theme-toggle {
+    width: 46px !important;
+    height: 46px !important;
+
+    min-width: 46px !important;
+    min-height: 46px !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    color: #24613f !important;
+
+    background: rgba(255,255,255,.72) !important;
+
+    border: 1px solid rgba(64, 119, 79, .15) !important;
+    border-radius: 50% !important;
+
+    box-shadow:
+        0 4px 12px rgba(53, 91, 62, .06) !important;
+}
+
+/* Hover icon */
+.site-header .agh-hbtn:hover,
+.site-header .theme-toggle:hover {
+    color: #174e31 !important;
+    background: #ffffff !important;
+
+    transform: translateY(-1px) !important;
+}
+
+/* Badge */
+.site-header .agh-badge {
+    background: #2f7750 !important;
+    color: #fff !important;
+
+    border: 2px solid #edf6ee !important;
+}
+
+/* Header không làm nội dung bị che */
+body {
+    padding-top: 32px !important;
+}
+
+/* Desktop lớn */
+@media (min-width: 1500px) {
+    .site-header {
+        left: 48px !important;
+        right: 48px !important;
+    }
+
+    .site-header .header-inner {
+        padding-left: 34px !important;
+        padding-right: 34px !important;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+    .site-header {
+        left: 16px !important;
+        right: 16px !important;
+        top: 12px !important;
+    }
+
+    .site-header .nav-link {
+        padding-left: 13px !important;
+        padding-right: 13px !important;
+        font-size: 13px !important;
+    }
+
+    .site-header .main-nav {
+        gap: 2px !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+    .site-header {
+        top: 8px !important;
+        left: 10px !important;
+        right: 10px !important;
+
+        height: 62px !important;
+        border-radius: 18px !important;
+    }
+
+    .site-header .header-inner,
+    .site-header:not(.scrolled) .header-inner {
+        height: 62px !important;
+        min-height: 62px !important;
+
+        padding: 0 16px !important;
+    }
+
+    .site-header .logo-main {
+        font-size: 21px !important;
+    }
+
+    .site-header .main-nav {
+        display: none !important;
+    }
+
+    .site-header .agh-hgroup {
+        margin-left: auto !important;
+    }
+
+    .site-header .agh-hbtn,
+    .site-header .theme-toggle {
+        width: 40px !important;
+        height: 40px !important;
+        min-width: 40px !important;
+        min-height: 40px !important;
+    }
+
+    body {
+        padding-top: 82px !important;
+    }
+}
+
+/* MÀU NỀN PHẦN SẢN PHẨM - FINAL */
+.products-section {
+    background: #285b3d !important;
+    color: #ffffff !important;
 }

@@ -86,9 +86,11 @@
 </a>
 <nav class="main-nav" id="mainNav">
 <a class="nav-link" href="index.html">Trang chủ</a>
-<a class="nav-link" href="bach_khoa.html">Bách khoa Y khoa</a>
+<a class="nav-link" href="gioi_thieu.html">Giới thiệu</a>
+<a class="nav-link nav-link-products" href="#san-pham">Sản phẩm</a>
 <a class="nav-link" href="#kien-thuc">Kiến thức</a>
-<a class="nav-link" href="gioi_thieu.html">Về chúng tôi</a>
+<a class="nav-link" href="bach_khoa.html">Bách khoa</a>
+<a class="nav-link" href="lien_he.html">Liên hệ</a>
 </nav>
 <!-- MỚI: nút chuyển Dark Mode (tính năng chưa tồn tại trước đây, được thêm theo yêu cầu) -->
 <button aria-label="Chuyển giao diện Sáng/Tối" class="theme-toggle" id="themeToggle" type="button">
@@ -483,6 +485,15 @@
 <div class="anatomy-content-wrapper">
 <!-- Khu vực hiển thị ảnh 3D và các điểm chấm tương tác khớp chuẩn -->
 <div class="anatomy-visual-box">
+<!-- Thanh điều hướng hệ cơ quan: chỉ là lớp giao diện, không can thiệp hotspot/JS hiện có -->
+<div class="anatomy-system-nav" aria-hidden="true">
+<div class="anatomy-system-nav__item is-active"><span class="nav-icon">⌂</span><span>Tổng quan</span></div>
+<div class="anatomy-system-nav__item"><span class="nav-icon">◌</span><span>Hệ hô hấp</span></div>
+<div class="anatomy-system-nav__item"><span class="nav-icon">♡</span><span>Hệ tuần hoàn</span></div>
+<div class="anatomy-system-nav__item"><span class="nav-icon">◫</span><span>Hệ tiêu hóa</span></div>
+<div class="anatomy-system-nav__item"><span class="nav-icon">✥</span><span>Hệ thần kinh</span></div>
+<div class="anatomy-system-nav__item"><span class="nav-icon">♧</span><span>Hệ cơ xương</span></div>
+</div>
 <img alt="Sơ đồ minh họa các cơ quan trong cơ thể người: não, tim, phổi, gan, dạ dày, ruột, xương khớp và hệ miễn dịch" class="anatomy-main-img" src="images/giai_phau_3d.webp"/>
 <!-- CÁC ĐIỂM CHẤM TƯƠNG TÁC -->
 <!-- 1. Não bộ -->
@@ -541,6 +552,11 @@
 <span id="anatomyAdvice">Chủ động tra cứu giúp bạn hiểu rõ hơn về tình trạng sức
                                         khỏe của cơ thể mỗi ngày.</span>
 </div>
+<div class="anatomy-panel-features" aria-hidden="true">
+<div><span>✥</span><strong>Học hỏi</strong><small>kiến thức y khoa</small></div>
+<div><span>♧</span><strong>Hiểu rõ</strong><small>cơ thể của bạn</small></div>
+<div><span>♡</span><strong>Bảo vệ</strong><small>sức khỏe tốt hơn</small></div>
+</div>
 </div>
 </div>
 </div>
@@ -555,14 +571,14 @@
 <!-- PHẦN TIÊU ĐỀ VÀ TÌM KIẾM -->
 <div class="products-header-row">
 <div class="products-title">
-<h2>Tra cứu thông tin<br/>y khoa</h2>
+<div class="products-eyebrow"><span></span> TRA CỨU · AN ĐỨC 6</div>
+<h2>Tra cứu thông tin<br/><em>y khoa</em></h2>
 </div>
 <div class="products-actions">
-<p>Các sản phẩm đã được nhà thuốc xem xét kĩ lưỡng về chất lượng và đầy đủ giấy tờ pháp lý</p>
-<!-- Ô tìm kiếm giao diện tối -->
+<p>Các sản phẩm được Nhà Thuốc An Đức 6 xem xét kỹ lưỡng về chất lượng và đầy đủ giấy tờ pháp lý.</p>
 <div class="dark-search-box">
-<input id="productSearchInput" placeholder="Tìm kiếm sản phẩm..." type="text"/>
-<span>🔍</span>
+<input id="productSearchInput" placeholder="Tìm kiếm sản phẩm..." type="text" aria-label="Tìm kiếm sản phẩm"/>
+<span class="search-icon" aria-hidden="true">⌕</span>
 </div>
 </div>
 </div>
