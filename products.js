@@ -1,6 +1,7 @@
 const products = [
   {
     id: "sp_1",
+    isNew: true,
     name: "Máy Đo Huyết Áp Điện Tử Bắp Tay Microlife BP B1 AFIB – Công Nghệ AFIBsens, SmartMAM, Phát Hiện Nhịp Tim Bất Thường, USB Type-C",
     category: "dung_cu",  
     image: "images/May_do_huyet_ap_dien_tu.webp",
@@ -15,6 +16,7 @@ const products = [
   },
   {
     id: "sp_2",
+    isNew: true,
     name: "Máy Đo Nồng Độ Oxy Trong Máu Microlife OXY 200 – Đo SpO₂ & Nhịp Tim, Màn Hình LED, Nhỏ Gọn Dễ Sử Dụng",
     category: "dung_cu",
     image: "images/May_do_nong_do_oxy.webp",
@@ -29,6 +31,7 @@ const products = [
   },
   {
     id: "sp_3",
+    isNew: true,
     name: "Máy Đo Đường Huyết Aria Glucometer BSI Diagnostics – Bộ Máy Đo Đường Huyết Cá Nhân Kèm Phụ Kiện",
     category: "dung_cu",
     image: "images/May_do_duong_huyet.webp",

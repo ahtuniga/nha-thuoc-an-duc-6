@@ -170,29 +170,9 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
-        const topRow = document.createElement("div");
-        topRow.className = "card-top-row";
-
-
-        const badge = document.createElement("span");
-        badge.className = "card-badge";
-        badge.textContent = "New";
-
-
-        const code = document.createElement("span");
-        code.className = "card-code";
-
-        code.textContent =
-            product.name.substring(0, 2).toUpperCase() + "-01";
-
-
-        topRow.appendChild(badge);
-        topRow.appendChild(code);
-
-
         const title = document.createElement("h3");
         title.className = "card-title-elegant";
-        title.textContent = product.name; 
+        title.textContent = product.name;
 
 
         const imageBox = document.createElement("div");
@@ -207,6 +187,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         imageBox.appendChild(image);
+
+        if (product.isNew) {
+            const badge = document.createElement("span");
+            badge.className = "card-badge";
+            badge.textContent = "Mới";
+            imageBox.appendChild(badge);
+        }
 
 
         const footer = document.createElement("div");
@@ -226,8 +213,6 @@ document.addEventListener("DOMContentLoaded", () => {
         footer.appendChild(btn);
         footer.appendChild(price);
 
-
-        card.appendChild(topRow);
         card.appendChild(title);
         card.appendChild(imageBox);
         card.appendChild(footer);
@@ -462,9 +447,9 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
         const defaultNotes = {
-        thuc_pham: "Thực phẩm bảo vệ sức khỏe không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh. Hiệu quả tùy thuộc cơ địa mỗi người. Hãy đọc kỹ nhãn sản phẩm và hỏi ý kiến bác sĩ/dược sĩ trước khi dùng.",
-        my_pham: "Sản phẩm dùng ngoài da. Ngưng sử dụng nếu có dấu hiệu kích ứng và hỏi ý kiến bác sĩ da liễu nếu cần.",
-        dung_cu: "Thiết bị hỗ trợ theo dõi tại nhà, không thay thế chẩn đoán của bác sĩ. Kết quả đo có thể thay đổi theo thời điểm và tư thế đo."
+            thuc_pham: "Thực phẩm bảo vệ sức khỏe không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh. Hiệu quả tùy thuộc cơ địa mỗi người. Hãy đọc kỹ nhãn sản phẩm và hỏi ý kiến bác sĩ/dược sĩ trước khi dùng.",
+            my_pham: "Sản phẩm dùng ngoài da. Ngưng sử dụng nếu có dấu hiệu kích ứng và hỏi ý kiến bác sĩ da liễu nếu cần.",
+            dung_cu: "Thiết bị hỗ trợ theo dõi tại nhà, không thay thế chẩn đoán của bác sĩ. Kết quả đo có thể thay đổi theo thời điểm và tư thế đo."
         };
 
         setDetail(
@@ -739,7 +724,7 @@ if (backToTop) {
             behavior: "smooth"
         });
     });
-}   
+}
 
 /* Tạm dừng mô hình chuyển động ở phần giới thiệu khi nằm ngoài màn hình (đỡ tốn pin/CPU) */
 (function () {

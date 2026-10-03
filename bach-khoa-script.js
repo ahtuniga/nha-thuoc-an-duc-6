@@ -109,20 +109,6 @@ function createProductCard(product) {
     card.dataset.productId = product.id;
     card.setAttribute("aria-label", `Xem thông tin ${product.name}`);
 
-    // HÀNG 1: BADGE (NEW) & MÃ CODE (Không để đè nhau)
-    const topRow = document.createElement("div");
-    topRow.className = "card-top-row";
-    
-    const badge = document.createElement("span");
-    badge.className = "card-badge";
-    badge.textContent = "New";
-    
-    const code = document.createElement("span");
-    code.className = "card-code";
-    code.textContent = product.name.substring(0, 2).toUpperCase() + "-01";
-    
-    topRow.appendChild(badge);
-    topRow.appendChild(code);
 
     // HÀNG 2: TIÊU ĐỀ (Sang trọng, hiển thị 3 dòng)
     const title = document.createElement("h3");
@@ -137,6 +123,12 @@ function createProductCard(product) {
     image.alt = product.name;
     image.loading = "lazy";
     imageBox.appendChild(image);
+        if (product.isNew) {
+        const badge = document.createElement("span");
+        badge.className = "card-badge";
+        badge.textContent = "Mới";
+        imageBox.appendChild(badge);
+    }
 
     // HÀNG 4: FOOTER (Nút Khám phá trắng)
     const footer = document.createElement("div");
@@ -152,7 +144,6 @@ function createProductCard(product) {
     footer.appendChild(price);
 
     // Lắp ráp thẻ
-    card.appendChild(topRow);
     card.appendChild(title);
     card.appendChild(imageBox);
     card.appendChild(footer);

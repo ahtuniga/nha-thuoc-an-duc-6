@@ -419,6 +419,18 @@
         buildUI();
         bind();
         render();
+        loadFooterPhoto();
+    }
+
+    /* Nạp thêm khối ảnh nhà thuốc ở footer (footer-anh.js). gio-hang.js có mặt ở mọi trang
+       nên dùng làm điểm nạp chung, khỏi phải sửa từng trang HTML. */
+    function loadFooterPhoto() {
+        if (!BASE || document.getElementById("aghFooterPhoto")) return;
+        var s = document.createElement("script");
+        s.id = "aghFooterPhoto";
+        s.src = BASE + "footer-anh.js";
+        s.async = true;
+        document.body.appendChild(s);
     }
     if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
     else init();
