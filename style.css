@@ -6569,3 +6569,552 @@ body {
 @media (prefers-reduced-motion: reduce) {
     :root[data-theme="dark"]::before, :root[data-theme="dark"] body::before { animation: none; }
 }
+
+/* =========================================================
+   DARK MODE — SỬA LẠI 5 KHU VỰC BỊ MỜ / KHÓ ĐỌC
+   (header, Google Maps, thẻ sản phẩm, ô tìm kiếm, khung viên nang)
+   Đặt ở CUỐI style.css để thắng các khối !important phía trên.
+   Gỡ bỏ: xóa từ dòng này đến hết file.
+   ========================================================= */
+
+/* ---------- 1. THANH CÔNG CỤ (HEADER) ----------
+   Lỗi cũ: khối "HEADER FINAL" ép nền sáng + chữ xanh đậm bằng !important
+   nên dark mode không đè được -> chữ xanh đậm trên nền xám mờ. */
+:root[data-theme="dark"] .site-header,
+:root[data-theme="dark"] .site-header.scrolled {
+    background: rgba(7, 14, 22, .88) !important;
+    border: 1px solid rgba(110, 231, 196, .26) !important;
+    box-shadow: 0 14px 44px rgba(0, 0, 0, .55), 0 0 36px -14px rgba(110, 231, 196, .35) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(1.4) !important;
+    backdrop-filter: blur(20px) saturate(1.4) !important;
+}
+:root[data-theme="dark"] .site-header .header-inner,
+:root[data-theme="dark"] .site-header:not(.scrolled) .header-inner,
+:root[data-theme="dark"] .site-header.scrolled .header-inner {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+:root[data-theme="dark"] .site-header .logo,
+:root[data-theme="dark"] .site-header .logo-main {
+    color: #eafff8 !important;
+    text-shadow: 0 0 18px rgba(110, 231, 196, .45);
+}
+:root[data-theme="dark"] .site-header .logo-dot {
+    background: #6ee7c4 !important;
+    box-shadow: 0 0 12px #6ee7c4;
+}
+:root[data-theme="dark"] .site-header .nav-link {
+    color: #d5e6ec !important;
+    text-shadow: none;
+}
+:root[data-theme="dark"] .site-header .nav-link:hover {
+    color: #ffffff !important;
+    background: rgba(110, 231, 196, .12) !important;
+}
+:root[data-theme="dark"] .site-header .nav-link.active {
+    color: #6ee7c4 !important;
+    background: rgba(110, 231, 196, .16) !important;
+    box-shadow: inset 0 0 0 1px rgba(110, 231, 196, .30) !important;
+    text-shadow: 0 0 14px rgba(110, 231, 196, .55);
+}
+:root[data-theme="dark"] .site-header .nav-link.active::before {
+    background: #6ee7c4;
+    box-shadow: 0 0 10px rgba(110, 231, 196, .8);
+}
+:root[data-theme="dark"] .site-header .agh-hbtn,
+:root[data-theme="dark"] .site-header .theme-toggle {
+    color: #6ee7c4 !important;
+    background: rgba(110, 231, 196, .10) !important;
+    border: 1px solid rgba(110, 231, 196, .30) !important;
+    box-shadow: 0 0 22px -8px rgba(110, 231, 196, .55) !important;
+}
+:root[data-theme="dark"] .site-header .agh-hbtn:hover,
+:root[data-theme="dark"] .site-header .theme-toggle:hover {
+    color: #06121a !important;
+    background: #6ee7c4 !important;
+}
+:root[data-theme="dark"] .site-header .agh-badge {
+    background: #6ee7c4 !important;
+    color: #06121a !important;
+    border-color: #07101a !important;
+}
+:root[data-theme="dark"] .menu-toggle { color: #6ee7c4; }
+/* menu thả xuống trên điện thoại */
+@media (max-width: 1000px) {
+    :root[data-theme="dark"] .site-header .main-nav {
+        background: rgba(7, 14, 22, .97) !important;
+        border: 1px solid rgba(110, 231, 196, .26) !important;
+        box-shadow: 0 24px 60px rgba(0, 0, 0, .65) !important;
+    }
+}
+
+/* ---------- 2. GOOGLE MAPS ----------
+   Lỗi cũ: bản đồ bị đảo màu HAI lần (filter trên .location-map và
+   thêm một filter nữa trên iframe) -> trả về màu sáng, bị phủ xám mờ.
+   Sửa: bỏ filter ở khung ngoài, chỉ giữ MỘT lớp đảo màu trên iframe. */
+:root[data-theme="dark"] .location-map {
+    filter: none !important;
+    background: #0a141d !important;
+    border: 1px solid rgba(110, 231, 196, .28) !important;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 22px 50px -18px rgba(0, 0, 0, .8), 0 0 40px -16px rgba(110, 231, 196, .35) !important;
+}
+:root[data-theme="dark"] .location-map iframe {
+    filter: invert(.92) hue-rotate(180deg) saturate(.85) brightness(1.08) contrast(.95) !important;
+}
+:root[data-theme="dark"] .location-map:hover iframe {
+    filter: invert(.92) hue-rotate(180deg) saturate(1) brightness(1.12) contrast(1) !important;
+}
+:root[data-theme="dark"] .location-map::after {
+    box-shadow: inset 0 0 30px rgba(6, 11, 18, .55);
+}
+/* khung thông tin bên trái: chữ rõ hơn */
+:root[data-theme="dark"] .location-container {
+    background: linear-gradient(135deg, rgba(14, 26, 38, .92), rgba(8, 16, 26, .94)) !important;
+}
+:root[data-theme="dark"] .location-info h2 { color: #f4fffb !important; }
+:root[data-theme="dark"] .location-list strong { color: #f0f8fa !important; }
+:root[data-theme="dark"] .location-list small { color: #a9c0c9; }
+:root[data-theme="dark"] .location-label { color: #6ee7c4 !important; border-color: rgba(110, 231, 196, .35); background: rgba(110, 231, 196, .10); }
+:root[data-theme="dark"] .location-ico { background: rgba(110, 231, 196, .10); border-color: rgba(110, 231, 196, .30); color: #6ee7c4; }
+:root[data-theme="dark"] .location-status { background: rgba(110, 231, 196, .14); color: #6ee7c4; }
+:root[data-theme="dark"] .location-button {
+    background: linear-gradient(135deg, #22c19a, #2f8f6e) !important;
+    color: #04130f !important;
+    box-shadow: 0 14px 30px -10px rgba(34, 193, 154, .55) !important;
+}
+
+/* ---------- 3. THẺ SẢN PHẨM ----------
+   Lỗi cũ: nền thẻ đã tối nhưng tiêu đề vẫn là xanh đậm #173820. */
+:root[data-theme="dark"] .product-card {
+    color: #e6f1f5 !important;
+    background: linear-gradient(160deg, rgba(16, 30, 44, .94), rgba(9, 18, 28, .96)) !important;
+    border: 1px solid rgba(110, 231, 196, .22) !important;
+}
+:root[data-theme="dark"] .card-title-elegant {
+    color: #f1fbf8 !important;
+}
+:root[data-theme="dark"] .card-title-elegant::after {
+    background: #6ee7c4;
+    box-shadow: 0 0 8px rgba(110, 231, 196, .6);
+}
+:root[data-theme="dark"] .product-image-box .card-badge,
+:root[data-theme="dark"] .card-badge {
+    background: #0b3a33 !important;
+    color: #8ff5d6 !important;
+    border: 1px solid rgba(110, 231, 196, .45);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .35);
+}
+:root[data-theme="dark"] .shop-btn-white {
+    background: transparent !important;
+    color: #6ee7c4 !important;
+    border: 1px solid rgba(110, 231, 196, .45) !important;
+}
+:root[data-theme="dark"] .product-card:hover .shop-btn-white {
+    background: linear-gradient(135deg, #22c19a, #3b82f6) !important;
+    color: #04130f !important;
+    border-color: transparent !important;
+}
+:root[data-theme="dark"] .price-text-subtle { color: #a9c0c9 !important; }
+
+/* ô tìm kiếm */
+:root[data-theme="dark"] .dark-search-box input {
+    color: #f1fbf8 !important;
+    background: rgba(8, 16, 26, .75) !important;
+    border-color: rgba(110, 231, 196, .30) !important;
+}
+:root[data-theme="dark"] .dark-search-box input::placeholder { color: #9bb4be !important; }
+:root[data-theme="dark"] .dark-search-box input:focus {
+    border-color: #6ee7c4 !important;
+    box-shadow: 0 0 0 3px rgba(110, 231, 196, .18);
+}
+:root[data-theme="dark"] .dark-search-box span { color: #6ee7c4; }
+:root[data-theme="dark"] .products-section .container p { color: #c3d6dc; }
+
+/* ---------- 4. KHUNG CÔNG NGHỆ VIÊN NANG KÉP ----------
+   Lỗi cũ: lớp .tech-showcase-container vẫn giữ nền xanh sage trong mờ
+   (chỉ .tech-content-box bên trong được đổi), nên chữ trắng lọt vào nền xám xanh. */
+:root[data-theme="dark"] .tech-showcase-container {
+    background: linear-gradient(135deg, rgba(7, 17, 28, .94) 0%, rgba(10, 27, 42, .92) 100%) !important;
+    border: 1px solid rgba(110, 231, 196, .26) !important;
+    box-shadow: 0 40px 90px rgba(0, 0, 0, .65), 0 0 80px -30px rgba(110, 231, 196, .35) !important;
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+}
+:root[data-theme="dark"] .tech-showcase-container::before {
+    background:
+        radial-gradient(circle at 78% 50%, rgba(110, 231, 196, .16) 0%, transparent 55%),
+        radial-gradient(circle at 8% 0%, rgba(122, 168, 255, .12) 0%, transparent 50%);
+}
+:root[data-theme="dark"] .tech-content-box {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+}
+:root[data-theme="dark"] .tech-eyebrow { color: #6ee7c4 !important; }
+:root[data-theme="dark"] .tech-eyebrow .dot { background: #6ee7c4; box-shadow: 0 0 10px #6ee7c4; }
+:root[data-theme="dark"] .tech-left h2 { color: #f4fffb; text-shadow: 0 0 30px rgba(110, 231, 196, .18); }
+:root[data-theme="dark"] .tech-left h2 strong {
+    background: linear-gradient(90deg, #8ff5d6, #8fb6ff);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: #8ff5d6;
+}
+:root[data-theme="dark"] .tech-stats-badge {
+    background: rgba(110, 231, 196, .07) !important;
+    border: 1px solid rgba(110, 231, 196, .38) !important;
+    color: #e6f1f5;
+}
+:root[data-theme="dark"] .stats-text { color: #e6f1f5; }
+:root[data-theme="dark"] .badge-tag { border-color: rgba(110, 231, 196, .7); color: #6ee7c4; }
+:root[data-theme="dark"] .tech-footnote { color: #a9c0c9; }
+
+/* chú thích + đường kẻ */
+:root[data-theme="dark"] .tech-label strong { color: #6ee7c4; }
+:root[data-theme="dark"] .tech-label p { color: #d0e0e6; }
+:root[data-theme="dark"] .label-outer::after,
+:root[data-theme="dark"] .label-inner::before { border-top-color: rgba(110, 231, 196, .65); }
+
+/* viên nang: vỏ phát sáng neon, lõi sáng, hạt vi sinh màu mint */
+:root[data-theme="dark"] .cap-top,
+:root[data-theme="dark"] .cap-bottom {
+    background: linear-gradient(90deg, #0d5c4a 0%, #2fd1a8 42%, #0a4a3e 100%);
+    box-shadow: inset 6px 0 12px rgba(255, 255, 255, .35), inset -6px 0 15px rgba(0, 0, 0, .55), 0 0 34px -4px rgba(110, 231, 196, .55);
+}
+:root[data-theme="dark"] .cap-dust { background: linear-gradient(90deg, #cdeee4, #f1fffa); box-shadow: 0 0 30px rgba(110, 231, 196, .6); }
+:root[data-theme="dark"] .cap-dust::before {
+    background: radial-gradient(ellipse, rgba(110, 231, 196, .55) 0%, rgba(110, 231, 196, .22) 40%, transparent 70%);
+}
+:root[data-theme="dark"] .dust-particle { background: #6ee7c4; }
+:root[data-theme="dark"] .p2 { background: #7aa8ff; }
+:root[data-theme="dark"] .p4 { background: #eafff8; }
+:root[data-theme="dark"] .p5 { background: #8ff5d6; }
+
+/* =========================================================
+   SỬA LỖI: TÊN SẢN PHẨM DÀI BỊ ĐÈ LÊN CHỮ "KHÁM PHÁ"
+   Lỗi cũ: gạch chân là ::after nằm TRONG tiêu đề đang bị cắt 3 dòng
+   (line-clamp) và cao cố định 70px nên dòng thứ 3 bị gạch chân đè.
+   Sửa: tiêu đề cao đúng 3 dòng (không padding để line-clamp cắt gọn),
+   gạch chân chuyển sang đầu phần chân thẻ.
+   ========================================================= */
+.card-title-elegant {
+    flex: 0 0 auto !important;
+    height: calc(1.4em * 3) !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    padding: 0 !important;
+    margin: 0 0 12px !important;
+    background: none !important;
+}
+.card-title-elegant::after { display: none !important; }
+.card-footer::before {
+    content: "";
+    display: block;
+    width: 42px;
+    height: 1px;
+    margin-bottom: 12px;
+    background: #2c7046;
+}
+:root[data-theme="dark"] .card-footer::before {
+    background: #6ee7c4;
+    box-shadow: 0 0 8px rgba(110, 231, 196, .6);
+}
+@media (max-width: 700px) {
+    .card-title-elegant {
+        height: calc(1.4em * 3) !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        flex-basis: auto !important;
+    }
+}
+
+/* =========================================================
+   SỬA LỖI: LƯỚI SẢN PHẨM LUÔN 4 CỘT TRÊN MỌI MÀN HÌNH
+   Lỗi cũ: khối ".product-grid { repeat(4) }" nằm SAU các mốc responsive
+   nên đè mất chúng -> điện thoại bị 4 cột hẹp 84px.
+   Sửa: đặt lại mốc 3 cột / 2 cột / 1 cột ở cuối file.
+   ========================================================= */
+@media (max-width: 1100px) {
+    .product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 850px) {
+    .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+    .product-grid { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+}
+
+/* =========================================================
+   DARK MODE — MÔ HÌNH GIẢI PHẪU 3D (phiên bản "đêm")
+   Lỗi cũ: khối dark cũ dùng nền xanh sage xám + ảnh sáng nguyên bản,
+   lệch hẳn với giao diện navy/mint của các phần khác nên nhìn bạc, mờ.
+   Sửa: nền thủy tinh navy, ảnh được phủ lớp tối (không đụng file ảnh),
+   menu/bảng thông tin dạng kính, điểm chạm phát sáng mint.
+   Gỡ bỏ: xóa từ dòng này đến hết file.
+   ========================================================= */
+:root[data-theme="dark"] .anatomy-section { background: transparent !important; }
+:root[data-theme="dark"] .anatomy-section:before,
+:root[data-theme="dark"] .anatomy-section:after { border-color: rgba(110, 231, 196, .10) !important; }
+:root[data-theme="dark"] .anatomy-heading .eyebrow { color: #6ee7c4 !important; }
+:root[data-theme="dark"] .anatomy-heading .eyebrow:before,
+:root[data-theme="dark"] .anatomy-heading .eyebrow:after { background: rgba(110, 231, 196, .5) !important; }
+:root[data-theme="dark"] .anatomy-heading h2 { color: #f4fffb !important; text-shadow: 0 0 30px rgba(110, 231, 196, .22); }
+:root[data-theme="dark"] .anatomy-heading p { color: #b4c9d1 !important; }
+
+/* khung lớn */
+:root[data-theme="dark"] .anatomy-stage {
+    background:
+        radial-gradient(700px 420px at 12% 0%, rgba(40, 200, 170, .16), transparent 62%),
+        radial-gradient(760px 480px at 100% 100%, rgba(98, 120, 255, .20), transparent 62%),
+        linear-gradient(135deg, #08131d 0%, #0b1d2c 55%, #0d2236 100%) !important;
+    border: 1px solid rgba(110, 231, 196, .26) !important;
+    box-shadow: 0 34px 90px rgba(0, 0, 0, .65), 0 0 70px -28px rgba(110, 231, 196, .35) !important;
+}
+:root[data-theme="dark"] .stage-glow { opacity: .35; filter: hue-rotate(120deg) saturate(1.4); }
+
+/* khung ảnh: ảnh gốc sáng -> hạ sáng + phủ lớp tối, giữ rõ thân người ở giữa */
+:root[data-theme="dark"] .anatomy-visual-box {
+    background: linear-gradient(180deg, #123044 0%, #0d2335 100%) !important;
+    border: 1px solid rgba(110, 231, 196, .30) !important;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, .35), 0 0 40px -16px rgba(110, 231, 196, .4) !important;
+    backdrop-filter: none !important;
+}
+:root[data-theme="dark"] .anatomy-main-img {
+    filter: brightness(.62) contrast(1.18) saturate(1.2) !important;
+}
+:root[data-theme="dark"] .anatomy-visual-box::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+    background:
+        radial-gradient(ellipse 38% 70% at 50% 50%, #ffffff 0%, #b4ccd6 55%, #5f8397 100%),
+        #5f8397;
+}
+:root[data-theme="dark"] .anatomy-visual-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    background: radial-gradient(ellipse 28% 55% at 50% 48%, rgba(110, 231, 196, .18), transparent 70%);
+}
+
+/* menu hệ cơ quan: kính tối */
+:root[data-theme="dark"] .anatomy-system-nav {
+    background: rgba(7, 16, 26, .82) !important;
+    border: 1px solid rgba(110, 231, 196, .28) !important;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, .55), 0 0 30px -14px rgba(110, 231, 196, .4) !important;
+    backdrop-filter: blur(14px) !important;
+}
+:root[data-theme="dark"] .anatomy-system-nav__item { color: #c3d6dc !important; }
+:root[data-theme="dark"] .anatomy-system-nav__item .nav-icon {
+    color: #6ee7c4 !important;
+    background: rgba(110, 231, 196, .10) !important;
+    border: 1px solid rgba(110, 231, 196, .22);
+}
+:root[data-theme="dark"] .anatomy-system-nav__item.is-active {
+    color: #6ee7c4 !important;
+    background: rgba(110, 231, 196, .14) !important;
+    box-shadow: inset 0 0 0 1px rgba(110, 231, 196, .30);
+}
+:root[data-theme="dark"] .anatomy-system-nav__item.is-active .nav-icon {
+    color: #04130f !important;
+    background: #6ee7c4 !important;
+    box-shadow: 0 0 16px rgba(110, 231, 196, .65);
+}
+
+/* điểm chạm: mint phát sáng, nổi rõ trên nền tối */
+:root[data-theme="dark"] .dot-core {
+    background: #6ee7c4;
+    box-shadow: 0 0 12px #6ee7c4, 0 0 26px rgba(110, 231, 196, .8);
+}
+:root[data-theme="dark"] .pulse-ring { border-color: #6ee7c4; }
+:root[data-theme="dark"] .anatomy-hotspot:hover .dot-core,
+:root[data-theme="dark"] .anatomy-hotspot.active .dot-core {
+    background: #ffffff;
+    box-shadow: 0 0 18px #ffffff, 0 0 36px #6ee7c4;
+}
+
+/* bảng thông tin bên phải */
+:root[data-theme="dark"] .anatomy-details-panel {
+    background: linear-gradient(160deg, rgba(14, 26, 38, .94), rgba(8, 16, 26, .96)) !important;
+    border: 1px solid rgba(110, 231, 196, .26) !important;
+    box-shadow: 0 20px 56px rgba(0, 0, 0, .55) !important;
+}
+:root[data-theme="dark"] .panel-tag {
+    color: #6ee7c4 !important;
+    background: rgba(110, 231, 196, .10) !important;
+    border: 1px solid rgba(110, 231, 196, .32);
+}
+:root[data-theme="dark"] .panel-close-btn {
+    color: #d5e6ec !important;
+    background: rgba(110, 231, 196, .10) !important;
+    border: 1px solid rgba(110, 231, 196, .25);
+}
+:root[data-theme="dark"] .panel-close-btn:hover { background: #6ee7c4 !important; color: #04130f !important; }
+:root[data-theme="dark"] .panel-body h3 { color: #f4fffb !important; text-shadow: 0 0 24px rgba(110, 231, 196, .2); }
+:root[data-theme="dark"] .panel-body p { color: #c3d6dc !important; }
+:root[data-theme="dark"] .panel-suggestion {
+    color: #d5e6ec !important;
+    background: rgba(110, 231, 196, .07) !important;
+    border-left-color: #6ee7c4 !important;
+}
+:root[data-theme="dark"] .panel-suggestion strong { color: #8ff5d6 !important; }
+:root[data-theme="dark"] .anatomy-panel-features { border-top-color: rgba(110, 231, 196, .22) !important; }
+:root[data-theme="dark"] .anatomy-panel-features span {
+    color: #6ee7c4 !important;
+    background: rgba(110, 231, 196, .10) !important;
+}
+:root[data-theme="dark"] .anatomy-panel-features strong { color: #eaf6f4 !important; }
+:root[data-theme="dark"] .anatomy-panel-features small { color: #9fb6c0 !important; }
+
+/* =========================================================
+   KHUNG CÔNG NGHỆ VIÊN NANG KÉP — THIẾT KẾ MỚI (xanh lá đậm + vòng sáng)
+   Đặt ở CUỐI style.css. Màu đổi bằng các biến --tc-* ở ngay dưới.
+   Dark mode dùng tông navy/mint (khối :root[data-theme="dark"] bên dưới).
+   ========================================================= */
+.tech-showcase-container.tc-card {
+    --tc-a: #0b2616; --tc-b: #14402a; --tc-c: #091c11;
+    --tc-accent: #a8e58b;
+    --tc-r1: rgba(120, 205, 95, .30); --tc-r2: rgba(60, 165, 85, .30); --tc-r3: rgba(90, 180, 95, .16);
+    --tc-cap0: #0b4a22; --tc-cap1: #43d46f; --tc-cap2: #0a3d1d;
+    --tc-rim: #082d15; --tc-core: #d6f2c8; --tc-ring: #b8f59a;
+
+    position: relative;
+    width: min(1400px, calc(100% - 36px));
+    margin: 0 auto;
+    padding: clamp(34px, 5vw, 68px) clamp(26px, 5vw, 76px);
+    border-radius: 34px;
+    overflow: hidden;
+    background:
+        radial-gradient(520px 380px at 76% 30%, var(--tc-r1), transparent 65%),
+        radial-gradient(460px 360px at 100% 92%, var(--tc-r2), transparent 65%),
+        radial-gradient(380px 300px at 6% 100%, var(--tc-r3), transparent 65%),
+        linear-gradient(135deg, var(--tc-a) 0%, var(--tc-b) 55%, var(--tc-c) 100%) !important;
+    border: 1px solid rgba(168, 229, 139, .18) !important;
+    box-shadow: 0 40px 90px rgba(4, 22, 11, .55) !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+}
+.tech-showcase-container.tc-card::before { display: none !important; }
+
+.tc-grid {
+    position: relative; z-index: 2;
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    gap: 36px;
+    align-items: center;
+}
+
+/* ---- cột trái ---- */
+.tc-eyebrow {
+    display: flex; align-items: center; gap: 9px;
+    color: var(--tc-accent);
+    font-size: 12.5px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase;
+}
+.tc-title {
+    margin: 22px 0 30px; max-width: 560px;
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(32px, 4vw, 56px);
+    font-weight: 700; line-height: 1.13; letter-spacing: -1.3px;
+    color: #fff;
+}
+.tc-title strong { display: inline; font-weight: 800; color: var(--tc-accent); }
+
+.tc-badge {
+    display: flex; align-items: center; justify-content: space-between; gap: 18px;
+    max-width: 470px; padding: 16px 24px;
+    border: 1px solid rgba(255, 255, 255, .24); border-radius: 16px;
+    background: rgba(255, 255, 255, .04);
+    color: #fff;
+}
+.tc-pill {
+    padding: 7px 14px; border: 1px solid rgba(255, 255, 255, .85); border-radius: 22px;
+    font-size: 10.5px; font-weight: 700; line-height: 1.25; text-align: center; text-transform: uppercase;
+    white-space: nowrap;
+}
+.tc-badge-text { font-size: 14.5px; line-height: 1.35; color: rgba(255, 255, 255, .88); }
+.tc-badge-num { margin-left: auto; font-size: 30px; font-weight: 700; letter-spacing: -.5px; white-space: nowrap; }
+.tc-desc { max-width: 470px; margin: 22px 0 0; font-size: 14.5px; line-height: 1.65; color: rgba(255, 255, 255, .8); }
+.tc-footnote { max-width: 470px; margin: 14px 0 0; font-size: 12px; line-height: 1.55; color: rgba(255, 255, 255, .55); }
+
+/* ---- cột phải ---- */
+.tc-stage { position: relative; min-height: 470px; }
+.tc-capsule {
+    position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+    width: 74%; max-width: 440px; height: auto; overflow: visible;
+}
+.tc-s0 { stop-color: var(--tc-cap0); } .tc-s1 { stop-color: var(--tc-cap1); } .tc-s2 { stop-color: var(--tc-cap2); }
+.tc-r0 { stop-color: var(--tc-ring); } .tc-r1 { stop-color: var(--tc-ring); stop-opacity: 1; }
+.tc-g0 { stop-color: var(--tc-ring); }
+.tc-rim { fill: var(--tc-rim); }
+.tc-core circle:not([fill]), .tc-core rect { fill: var(--tc-core); opacity: .92; }
+.tc-core { filter: drop-shadow(0 0 8px var(--tc-ring)); }
+.tc-float-a { animation: tcFloatA 5s ease-in-out infinite; }
+.tc-float-b { animation: tcFloatB 5s ease-in-out infinite; }
+.tc-pulse { animation: tcPulse 4.5s ease-in-out infinite; transform-origin: 180px 235px; }
+@keyframes tcFloatA { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+@keyframes tcFloatB { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(10px); } }
+@keyframes tcPulse { 0%, 100% { opacity: .75; transform: scale(1); } 50% { opacity: 1; transform: scale(1.06); } }
+@media (prefers-reduced-motion: reduce) { .tc-float-a, .tc-float-b, .tc-pulse { animation: none; } }
+
+.tc-label { position: absolute; right: 0; width: 44%; max-width: 250px; padding-left: 58px; color: #fff; }
+.tc-label strong { display: block; margin-bottom: 7px; font-size: 13px; font-weight: 700; letter-spacing: 1px; color: #fff; }
+.tc-label p { margin: 0; font-size: 13.5px; line-height: 1.6; color: rgba(255, 255, 255, .78); }
+.tc-label::before { content: ""; position: absolute; left: 0; width: 46px; height: 1px; background: rgba(255, 255, 255, .6); }
+.tc-label::after { content: ""; position: absolute; left: -3px; width: 7px; height: 7px; border-radius: 50%; background: #fff; box-shadow: 0 0 8px rgba(255, 255, 255, .8); }
+.tc-label-outer { top: 17%; }
+.tc-label-outer::before { top: 6px; } .tc-label-outer::after { top: 3px; }
+.tc-label-inner { top: 56%; }
+.tc-label-inner::before { bottom: 0; } .tc-label-inner::after { bottom: -3px; }
+
+/* ---- điện thoại / máy tính bảng ---- */
+@media (max-width: 900px) {
+    .tc-grid { grid-template-columns: 1fr; gap: 26px; }
+    .tc-title { max-width: none; }
+    .tc-stage { min-height: 0; display: flex; flex-direction: column; align-items: center; gap: 18px; }
+    .tc-capsule { position: static; transform: none; width: 62%; max-width: 270px; }
+    .tc-label { position: static; width: 100%; max-width: 440px; padding-left: 20px; border-left: 2px solid rgba(255, 255, 255, .35); }
+    .tc-label::before, .tc-label::after { display: none; }
+}
+@media (max-width: 520px) {
+    .tc-badge { gap: 12px; padding: 14px 16px; }
+    .tc-badge-text { font-size: 13px; }
+    .tc-badge-num { font-size: 24px; }
+}
+
+/* ---- DARK MODE: tông navy + mint, cùng hệ với các phần khác ---- */
+:root[data-theme="dark"] .tech-showcase-container.tc-card {
+    --tc-a: #06101a; --tc-b: #0a2233; --tc-c: #07131d;
+    --tc-accent: #6ee7c4;
+    --tc-r1: rgba(110, 231, 196, .20); --tc-r2: rgba(98, 120, 255, .22); --tc-r3: rgba(40, 200, 170, .12);
+    --tc-cap0: #0b4d46; --tc-cap1: #2fd1a8; --tc-cap2: #093a3a;
+    --tc-rim: #062a2c; --tc-core: #dffff6; --tc-ring: #7be9d0;
+    border-color: rgba(110, 231, 196, .26) !important;
+    box-shadow: 0 40px 90px rgba(0, 0, 0, .65), 0 0 80px -30px rgba(110, 231, 196, .35) !important;
+}
+
+/* DARK MODE — HÌNH NỀN BÊN NGOÀI KHUNG VIÊN NANG */
+:root[data-theme="dark"] .tech-showcase-section {
+    background-color: #060d16;
+    background-image:
+        linear-gradient(rgba(6, 13, 22, .35), rgba(6, 13, 22, .35)),
+        url('images/bg_tech_dark.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* điện thoại không hỗ trợ background-attachment: fixed */
+@media (max-width: 900px) {
+    :root[data-theme="dark"] .tech-showcase-section {
+        background-attachment: scroll;
+    }
+}

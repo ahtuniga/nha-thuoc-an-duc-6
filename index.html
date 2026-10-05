@@ -20,7 +20,7 @@
 <meta content="Nhà Thuốc An Đức 6 | Chăm sóc sức khỏe" name="twitter:title"/>
 <meta content="Nhà Thuốc An Đức 6 - Cung cấp thông tin sản phẩm, kiến thức và tư vấn chăm sóc sức khỏe." name="twitter:description"/>
 <meta content="https://YOUR-DOMAIN.vn/images/og-image.jpg" name="twitter:image"/>
-<link href="style.css?v=999" rel="stylesheet"/>
+<link href="style.css?v=1001" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
@@ -600,52 +600,78 @@
      KHUNG CÔNG NGHỆ VIÊN NANG (GIAO DIỆN QUỐC TẾ)
      ========================================================= -->
 <section class="tech-showcase-section" id="cong-nghe">
-<div class="tech-showcase-container">
-<div class="tech-content-box">
-<!-- NỬA BÊN TRÁI: TIÊU ĐỀ & THÔNG SỐ -->
-<div class="tech-left">
-<span class="tech-eyebrow"><span class="dot"></span> KIẾN THỨC THAM KHẢO · VIÊN NANG KÉP</span>
-<h2>
-                            Vì sao nhiều lợi khuẩn khó sống sót qua dạ dày—<strong>và cách bào chế giúp hỗ trợ điều
-                                đó.</strong>
-</h2>
-<div class="tech-stats-badge">
-<div class="stats-text">
-<span class="badge-tag">MINH HỌA</span> Cấu trúc<br/>viên nang kép
-                            </div>
-<div class="stats-number">2 lớp</div>
+<div class="tech-showcase-container tc-card">
+<div class="tc-grid">
+<!-- CỘT TRÁI: tiêu đề, thông số, mô tả -->
+<div class="tc-left">
+<span class="tc-eyebrow">
+<svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M20 4c-9 0-15 4-15 11 0 1.2.2 2.2.5 3C7 14 10 11.5 14 10c-3 2-5.2 4.6-6.6 8.4.9.4 1.9.6 3 .6 6 0 9.6-5 9.6-15z"/></svg>
+Kiến thức thực phẩm khỏe · Viên nang kép
+</span>
+<h2 class="tc-title">Vì sao nhiều lợi khuẩn khó sống sót qua dạ dày<strong>—và cách bào chế giúp hỗ trợ điều đó.</strong></h2>
+<div class="tc-badge">
+<span class="tc-pill">Viên nang<br/>kép</span>
+<span class="tc-badge-text">Công nghệ<br/>viên nang kép</span>
+<span class="tc-badge-num">2 lớp</span>
 </div>
-<p class="tech-footnote">*Hình minh họa mang tính giới thiệu kiến thức chung, không đại diện cho
-                            một sản phẩm cụ thể. Khả năng sống sót của lợi khuẩn phụ thuộc vào chủng vi sinh và công
-                            thức của từng sản phẩm.</p>
+<p class="tc-desc">Viên nang kép được thiết kế nhằm hạn chế tác động của axit dạ dày lên lợi khuẩn, hỗ trợ đưa thành phần đến đúng vị trí cần thiết trong đường ruột.</p>
+<p class="tc-footnote">*Hình minh họa mang tính giới thiệu kiến thức chung, không đại diện cho một sản phẩm cụ thể. Khả năng sống sót của lợi khuẩn phụ thuộc vào chủng vi sinh và công thức của từng sản phẩm.</p>
 </div>
-<!-- NỬA BÊN PHẢI: VIÊN NANG 3D & CHÚ THÍCH -->
-<div class="tech-right">
-<div class="tech-capsule-wrapper">
-<!-- Chú thích Trái (Chỉ vào nắp trên) -->
-<div class="tech-label label-outer">
+<!-- CỘT PHẢI: viên nang + vòng sáng + chú thích -->
+<div class="tc-stage">
+<svg aria-label="Minh họa cấu trúc viên nang kép" class="tc-capsule" role="img" viewBox="0 0 360 470">
+<defs>
+<linearGradient id="tcCap" x1="0" x2="1" y1="0" y2="0">
+<stop class="tc-s0" offset="0"></stop>
+<stop class="tc-s1" offset=".4"></stop>
+<stop class="tc-s2" offset="1"></stop>
+</linearGradient>
+<linearGradient id="tcRing" x1="0" x2="1" y1="0" y2="0">
+<stop class="tc-r0" offset="0" stop-opacity="0"></stop>
+<stop class="tc-r1" offset=".5"></stop>
+<stop class="tc-r0" offset="1" stop-opacity="0"></stop>
+</linearGradient>
+<radialGradient id="tcGlow">
+<stop class="tc-g0" offset="0" stop-opacity=".55"></stop>
+<stop class="tc-g0" offset="1" stop-opacity="0"></stop>
+</radialGradient>
+<filter height="300%" id="tcBlur" width="300%" x="-100%" y="-100%"><feGaussianBlur stdDeviation="5"></feGaussianBlur></filter>
+</defs>
+<ellipse class="tc-pulse" cx="180" cy="235" fill="url(#tcGlow)" rx="160" ry="130"></ellipse>
+<!-- vòng sáng quanh lõi -->
+<g transform="rotate(-16 180 235)">
+<ellipse cx="180" cy="235" fill="none" filter="url(#tcBlur)" opacity=".8" rx="150" ry="38" stroke="url(#tcRing)" stroke-width="5"></ellipse>
+<ellipse cx="180" cy="235" fill="none" rx="150" ry="38" stroke="url(#tcRing)" stroke-width="2.2"></ellipse>
+<ellipse cx="180" cy="235" fill="none" opacity=".6" rx="136" ry="30" stroke="url(#tcRing)" stroke-width="1"></ellipse>
+</g>
+<!-- nửa trên -->
+<g class="tc-float-a">
+<path d="M142 190V86a38 38 0 0 1 76 0v104z" fill="url(#tcCap)"></path>
+<ellipse class="tc-rim" cx="180" cy="190" rx="38" ry="7"></ellipse>
+<rect fill="#fff" height="96" opacity=".34" rx="4" width="8" x="152" y="76"></rect>
+</g>
+<!-- lõi lợi khuẩn -->
+<g class="tc-core">
+<circle cx="180" cy="235" fill="url(#tcGlow)" r="46"></circle>
+<circle cx="168" cy="224" r="14"></circle><circle cx="192" cy="221" r="10"></circle>
+<circle cx="188" cy="246" r="15"></circle><circle cx="166" cy="248" r="9"></circle>
+<circle cx="205" cy="238" r="7"></circle>
+<rect height="10" rx="5" transform="rotate(-30 160 238)" width="26" x="147" y="233"></rect>
+</g>
+<!-- nửa dưới -->
+<g class="tc-float-b">
+<path d="M142 280v104a38 38 0 0 0 76 0V280z" fill="url(#tcCap)"></path>
+<ellipse class="tc-rim" cx="180" cy="280" rx="38" ry="7"></ellipse>
+<rect fill="#fff" height="80" opacity=".3" rx="4" width="8" x="152" y="292"></rect>
+</g>
+</svg>
+<div class="tc-label tc-label-outer">
 <strong>VIÊN NANG NGOÀI</strong>
-<p>Lớp vỏ ngoài được thiết kế nhằm hạn chế tác động của axit dạ dày lên phần bên trong.
-                                </p>
+<p>Lớp vỏ ngoài được thiết kế nhằm hạn chế tác động của axit dạ dày lên phần bên trong.</p>
 </div>
-<!-- Cấu trúc viên nang tách rời (Nâng cấp hiệu ứng nổ) -->
-<div class="capsule-3d">
-<div class="cap-top"></div>
-<div class="cap-dust">
-<div class="dust-particle p1"></div>
-<div class="dust-particle p2"></div>
-<div class="dust-particle p3"></div>
-<div class="dust-particle p4"></div>
-<div class="dust-particle p5"></div>
-<div class="dust-particle p6"></div>
-</div>
-<div class="cap-bottom"></div>
-</div>
-<!-- Chú thích Phải (Chỉ vào bột lõi) -->
-<div class="tech-label label-inner">
+<div class="tc-label tc-label-inner">
 <strong>VIÊN NANG TRONG</strong>
-<p>Chứa thành phần hoạt chất, được thiết kế để giải phóng ở đường ruột.</p>
-</div>
+<p>Chứa lợi khuẩn, chất xơ prebiotic và các dưỡng chất hỗ trợ, được thiết kế để giải phóng ở đường ruột.</p>
 </div>
 </div>
 </div>
